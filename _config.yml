@@ -1,0 +1,23 @@
+# Site settings
+title: Blog
+description: "The latest goings-on with the Polymer project and in the community. We'll update the blog to announce major releases and showcase cool stuff being built with Polymer."
+baseurl: ""
+url: "http://blog.polymer-project.com"
+twitter_username: polymer
+github_username:  polymer
+feed_url: "/feed.xml"
+add_permalinks: true
+paginate: 5
+
+exclude: ["node_modules", "sass", "app.yaml", "README.md",
+          "CONTRIBUTING.md", "Gruntfile.js", "package.json", "config.rb",
+          "build.py", "polymer-all", "components"]
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlighter: pygments
+
+# Serve settings
+# detach: true
+

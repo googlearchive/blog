@@ -1,0 +1,61 @@
+application: polymer-blog
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+#default_expiration: "0s"
+
+libraries:
+- name: PIL
+  version: latest
+
+#inbound_services:
+#- warmup
+
+handlers:
+
+# Top-level URLs ---------------------------------------------------------------
+- url: /$
+  static_files: _site/index.html
+  upload: _site/index\.html
+
+# Map raw paths with trailing "/" to an index.html file.
+- url: /(.*)/$
+  static_files: _site/\1/index.html
+  upload: _site/(.*)/index.html
+
+# All other URLs map directly to their path in _site/.
+- url: /
+  static_dir: _site
+  http_headers:
+    Access-Control-Allow-Origin: "*"
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?.*\.bak$
+- ^(.*/)?node_modules/.*
+- ^(.*/)?third_party/closure/.*
+- ^scripts/.*
+- ^.*.md|markdown
+
+# few extras to reduce number of files uploaded.
+- ^(.*/)?Makefile$
+- ^(.*/)?.*\.sublime-project
+- ^(.*/)?.*\.sublime-workspace
+- ^(.*/)?platform-dev/workbench/.*
+- ^(.*/)?(AUTHORS|LICENSE|PATENTS|COPYING|CONTRIBUTING|README)$
+- ^(.*/)?polymer-all/labs/dfreedm/core-icon-study/.*
+- ^(.*/)?polymer-all/labs/.* # don't upload all of labs
+- ^(.*/)?polymer-all/tools/doc/.*
+- ^(.*/)?components/tools/.* # tool is already in /polymer-all
+- ^(.*/)?components/firebase-simple-login/firebase-simple-login-(java|objc)/.*
+- ^(.*/)?components/firebase-simple-login/lib/.*

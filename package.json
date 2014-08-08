@@ -1,0 +1,10 @@
+{
+  "name": "Blog",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-jekyll": "*",
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-appengine": "~0.1.5"
+  }
+}

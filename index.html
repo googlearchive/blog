@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <div class="post">
+
+          <header class="post-header">
+            <h1>{{ post.title }}</h1>
+            <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ page.meta }}{% endif %}</p>
+          </header>
+
+          <article class="post-content">
+          {{ post.content }}
+          </article>
+
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

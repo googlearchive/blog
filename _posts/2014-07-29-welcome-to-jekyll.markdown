@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Welcome to the Polymer blog!"
+date:   2014-07-29 11:57:35
+categories: misc
+---
+
+We'll keep you up-to-date with the latest Polymer releases, as well as cool things happening in the Polymer community.
+
+If you'd like to let us know about something you're working on, feel free to tweet us [@polymer](https://twitter.com/polymer)
