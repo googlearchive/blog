@@ -11,5 +11,5 @@ By “fully functional browsers” we don’t just mean “Chrome.”  We’re b
  
 Being future-facing and in Developer Preview means things today won’t always work as expected - your ongoing feedback and contributions are crucial to helping bridge the gap. And with only 32kb to download, the gap is smaller than ever.
  
-Get started with [Polymer](www.polymer-project.org), contribute to the [Github](https://github.com/Polymer), or find us on [Twitter](https://twitter.com/Polymer).
+Get started with [Polymer](http://polymer-project.org), contribute to the [Github](https://github.com/Polymer), or find us on [Twitter](https://twitter.com/Polymer).
 
