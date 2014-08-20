@@ -18,6 +18,13 @@ markdown: kramdown
 permalink: pretty
 highlighter: pygments
 
+# Authors
+authors:
+    taylor:
+        display_name: taylor
+        github: tjsavage
+
+
 # Serve settings
 # detach: true
 
