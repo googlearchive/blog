@@ -20,7 +20,8 @@ module.exports = function(grunt) {
     appengine: {
       options: {
         manageFlags: {
-          oauth2: true
+          email: "admin@polymer-project.org",
+          no_cookies: true
         },
         runFlags: {
           port: 3000
