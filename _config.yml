@@ -20,6 +20,9 @@ highlighter: pygments
 
 # Authors
 authors:
+    polymer-team:
+        display_name: polymer team
+        github: Polymer
     taylor:
         display_name: taylor
         github: tjsavage
