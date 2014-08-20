@@ -28,6 +28,8 @@ Now you're ready to do some work!
 
 ## Creating a post
 
+First, make sure you're added to the authors list in `_config.yml`.
+
 Posts are in the `_posts` folder. When creating a new post, the titles should be in the form:  
 `YYYY-MM-DD-title.markdown`. Drafts are in the `_drafts` folder.
 
