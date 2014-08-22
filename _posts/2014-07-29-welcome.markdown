@@ -8,4 +8,4 @@ categories: misc
 
 We will keep you up-to-date with the latest Polymer releases, as well as cool things happening in the Polymer community.
 
-If you'd like to let us know about something you're working on, feel free to tweet us [@polymer](https://twitter.com/polymer)
+We'd love to hear about Polymer-driven apps you're working on! Tweet us at [@polymer](https://twitter.com/polymer)
