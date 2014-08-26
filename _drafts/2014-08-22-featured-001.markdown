@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "Community Highlights #001"
+date:   2014-08-22 11:05:00
+categories: featured
+author: taylor
+---
+_There's lots of awesome stuff out there being built with Polymer and Web Components. In what will be a recurring feature on this Polymer blog, we'll showcase some of the neat projects we come across. Working on something using Polymer? We'd love to hear about it! Tweet us [@polymer](https://twitter.com/Polymer)._
+
+### [ripnick.com](ripnick.com) - A past and future narrative of a classic TV network
+
+Your nostalgia fix for the week - an interactive timeline showing the Nickelodeon lineup through the years, and even speculating into the future. Guaranteed to make even the youngest of us feel old.
+
+![ripnick.com screenshot](/images/featured/ripnick.com.png)
+
+### [Homeslice](http://www.homesliceapp.com/)
+
+A great example of the power of Web technology to create cross-device native apps. Homeslice helps keeps your house happy, allowing roomates to track tasks and responsibilities. The app uses [CrossWalk](https://crosswalk-project.org/), [Polymer](http://polymer-project.org), and [Firebase](https://www.firebase.com/) to have one consistent codebase across both iOS and Android.
+
+![homeslice screenshot](/images/featured/homeslice.png)
+
+### [tab-selector](http://mcollina.github.io/tab-selector/components/tab-selector/) automatically selects a paper-tab on scroll
+
+This slick custom element adds to the paper-tab functionality, by automatically selecting the next tab when you scroll to the corresponding section. Awesome work [mcollina](https://github.com/mcollina)
+
+![tab-selector code screenshot](/images/featured/tab-selector.png)
