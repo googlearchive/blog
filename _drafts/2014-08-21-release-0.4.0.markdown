@@ -5,17 +5,9 @@ date:   2014-08-21 6:22:00
 categories: releases
 author: polymer-team
 ---
-_We'll announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is still hot out of the oven, so there'll be lots of entropy in these early release as things harden. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
+_Going forward, we'll announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is still hot out of the oven, so there'll be lots of entropy in these early release as things harden. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
 
 This one's a big one! Here are the major changes to watch out for:
-
-### `flex-basis` now defaults to 0 and avoids cross-browser bugs
-
-Previously, on browsers other than IE, when a layout container had no explicit size and an element inside it was made to flex it would have an effective size of its intrinsic size. After this change, the element has an effective size of 0.
-
-The idea is that you've flexed the element to fit into a container that itself has no size. This is almost always a mistake. In the rare cases where it is needed, we have the auto attribute to indicate explicitly that a flex-basis of auto should be used.
-
-See [polymer-dev/issues/79](https://github.com/Polymer/polymer-dev/issues/79) for a full run-down of the new change.
 
 ### You only need to name your element once
 
@@ -42,6 +34,14 @@ Now, you now only need to name your element once. The following is now supported
     </polymer-element>
 
 Hooray for DRY.
+
+### `flex-basis` now defaults to 0 and avoids cross-browser bugs
+
+Previously, on browsers other than IE, when a layout container had no explicit size and an element inside it was made to flex it would have an effective size of its intrinsic size. After this change, the element has an effective size of 0.
+
+The idea is that you've flexed the element to fit into a container that itself has no size. This is almost always a mistake. In the rare cases where it is needed, we have the auto attribute to indicate explicitly that a flex-basis of auto should be used.
+
+See [polymer-dev/issues/79](https://github.com/Polymer/polymer-dev/issues/79) for a full run-down of the new change.
 
 ### Refactored `platform.js` so you don't need it on Chrome
 
