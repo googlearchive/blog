@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "Polymer 0.4.0 Released!"
+date:   2014-08-21 6:22:00
+categories: releases
+author: polymer-team
+---
+_Going forward, we'll announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is still hot out of the oven, so there'll be lots of entropy in these early releases as things harden. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
+
+This one's a big one! Here are the major changes to watch out for:
+
+### _New:_ You only need to name your element once
+
+Before this release, you would have to often name your element twice:
+
+    <polymer-element name="x-foo">
+        <template>{{message}}</template>
+        <script>
+            Polymer('x-foo', {
+              message: 'Hi!'
+            });
+        </script>
+    </polymer-element>
+
+Now, you can leave off the element name to the `Polymer()` constructor, keeping things more DRY:
+
+    <polymer-element name="x-foo">
+        <template>{{message}}</template>
+        <script>
+            Polymer({ //look ma! no x-foo
+              message: 'Hi!'
+            });
+        </script>
+    </polymer-element>
+
+Hooray for DRY.
+
+### _New:_ `auto-vertical` layout attribute
+
+This new layout attribute will set an auto flex basis on the element only when it is part of a vertical layout.  This is meant to be useful for responsive designs - for example, if you want your layout in columns when wide, and rows when narrow.
+
+### `flex-basis` now defaults to 0 and avoids cross-browser bugs
+
+Previously, on browsers other than IE, when a layout container had no explicit size and an element inside it was made to flex it would have an effective size of its intrinsic size. After this change, the element has an effective size of 0.
+
+The idea is that you've flexed the element to fit into a container that itself has no size. This is almost always a mistake. In the rare cases where it is needed, we have the `auto` attribute to indicate explicitly that a `flex-basis` of auto should be used.
+
+See [polymer-dev/issues/79](https://github.com/Polymer/polymer-dev/issues/79) for a full run-down of the new change.
+
+### Refactored `platform.js` so you don't need it on Chrome
+
+The `platform.js` polyfill layer is no longer needed for browsers that fully implement the Web Components APIs, such as Chrome 36+.  This means the total payload for using Polymer on your site, for fully-compliant browsers, is a mere 32kb of `polymer.js`.
+
+### Published properties now default to `undefined`
+
+Previously, published properties that were not yet set would default to `null` - with 0.4.0, they will now default to `undefined`. For example, for the example element:
+
+    <polymer-element name="x-foo" attributes="barProperty">
+        <template>
+        </template>
+        <script>
+            Polymer({});
+        </script>
+    </polymer-element>
+
+Instantiating it and inspecting its property will result in: 
+
+    > $('x-foo').barProperty
+    undefined
+
+
+See the full release notes.
