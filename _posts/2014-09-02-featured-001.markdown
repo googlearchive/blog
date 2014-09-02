@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Community Highlights #001"
-date:   2014-08-22 11:05:00
+date:   2014-09-02 11:05:00
 categories: featured
 author: taylor
 ---
