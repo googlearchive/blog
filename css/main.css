@@ -856,3 +856,8 @@ a:visited {
 .post-content img {
   width: 100%;
 }
+
+/* line 12, ../_sass/main.scss */
+.single-post h1 {
+  margin-bottom: 25px;
+}
