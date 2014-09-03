@@ -69,4 +69,4 @@ Instantiating it and inspecting its property will result in:
     undefined
 
 
-See the full release notes.
+See the [full release notes](https://github.com/Polymer/polymer/releases/tag/0.4.0) for fully detailed info on 0.4.0.
