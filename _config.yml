@@ -26,6 +26,9 @@ authors:
     taylor:
         display_name: taylor
         github: tjsavage
+    jeffy:
+        display_name: Jeff Posnick
+        github: jeffposnick
 
 
 # Serve settings
