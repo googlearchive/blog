@@ -1,5 +1,5 @@
 # Site settings
-title: Blog
+title: Polymer Blog
 description: "The latest goings-on with the Polymer project and in the community. We'll update the blog to announce major releases and showcase cool stuff being built with Polymer."
 baseurl: ""
 url: "http://blog.polymer-project.org"
