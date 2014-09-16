@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "&lt;template is=\"auto-binding\"&gt; is=awesome"
+title:  "<template is=\"auto-binding\"> is=awesome"
 date:   2014-09-11 12:00:00
 categories: howto
 author: jeffy

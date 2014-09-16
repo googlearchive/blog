@@ -2,7 +2,7 @@
 
   <div class="wrap">
 
-    <span><img id="logo" src="/images/logos/lockup.svg"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></span>
+    <span><img id="logo" src="/images/logos/lockup.svg"><a class="site-title" href="{{ site.baseurl }}/">Blog</a></span>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -18,7 +18,7 @@
       </a>
       <div class="trigger">
         {% for page in site.pages %}
-          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | xml_escape }}</a>{% endif %}
         {% endfor %}
       </div>
     </nav>
