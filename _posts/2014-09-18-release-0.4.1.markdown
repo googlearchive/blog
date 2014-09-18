@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Polymer 0.4.1 Released!"
+date:   2014-09-18 18:22:00
+categories: releases
+author: polymer-team
+---
+_We'll announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is still hot out of the oven, so there'll be lots of entropy in these early releases as things harden. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
+
+A small update, with some important new changes to be aware of:
+
+### _New:_ core-a11y-keys
+
+One of the major potentials we see of Polymer is to empower developers in making their apps accessible. As part of this release, we've included a new element in the `core-*` set: `core-a11y-keys`.
+
+The `core-a11y-keys` element provides a normalized interface for processing keyboard commands, specifically those related to [WAI-ARIA best practices](http://www.w3.org/TR/wai-aria-practices/#kbd_general_binding).
+
+You can drop `core-a11y-keys` inside your element and bind to your handler, to listen for specific keystrokes. It's all nicely declarative:
+
+    <polymer-element name="my-accessible-element">
+        <template>
+          <core-a11y-keys target="{{}}" keys="left right pagedown pageup" on-keys-pressed="{{handleKeypress}}">
+          </core-a11y-keys>
+        </template>
+        <script>
+            Polymer({
+              handleKeypress: function(event) {
+                // Handle the input here.
+              }
+            });
+        </script>
+    </polymer-element>
+
+Check out the [repository for the element](https://github.com/Polymer/core-a11y-keys), and start adding accessibility keys to your elements!
+
+### _New:_ `Polymer.waitingFor()` and `Polymer.forceReady()` functions
+
+Polymer by design waits until any elements registered with `<polymer-element>` are completely ready before registering any elements. A common issue we've seen crop up is including an incomplete element while developing, resulting in a "blank screen" showing without an error.
+
+We've been hesitant to add any forced logging in situations like this - our thought is that common missteps like these should be solved by tools used in the development process, and not baked directly in the shippable framework.
+
+To the end of empowering Polymer developers, we've added the `Polymer.waitingFor()` and `Polymer.forceReady()` functions. `Polymer.waitingFor()` returns a list of elements that have had polymer-elements created but aren't yet ready to register. `Polymer.forceReady()` forces Polymer to register any pending elements, as an escape hatch to stop waiting for elements that may be partially defined.
+
+### iOS8 Compatibility
+
+It's finally here - and we've updated to support some changes/bugs that have cropped up in iOS8 Safari.
