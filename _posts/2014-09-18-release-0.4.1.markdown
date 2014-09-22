@@ -17,6 +17,7 @@ The `core-a11y-keys` element provides a normalized interface for processing keyb
 
 You can drop `core-a11y-keys` inside your element and bind to your handler, to listen for specific keystrokes. It's all nicely declarative:
 
+{%raw%}
     <polymer-element name="my-accessible-element">
         <template>
           <core-a11y-keys target="{{}}" keys="left right pagedown pageup" on-keys-pressed="{{handleKeypress}}">
@@ -30,6 +31,7 @@ You can drop `core-a11y-keys` inside your element and bind to your handler, to l
             });
         </script>
     </polymer-element>
+{% endraw %}
 
 Check out the [repository for the element](https://github.com/Polymer/core-a11y-keys), and start adding accessibility keys to your elements!
 
