@@ -29,7 +29,9 @@ authors:
     jeffy:
         display_name: Jeff Posnick
         github: jeffposnick
-
+    arthur:
+        display_name: arthur
+        github: arthurevans
 
 # Serve settings
 # detach: true
