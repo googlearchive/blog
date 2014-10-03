@@ -7,7 +7,7 @@ author: polymer-team
 ---
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
 
-Lots of new element features included in this release, as well as some breaking changes to be aware of:
+Lots of new element features included in this release, as well as some <a href="#breaking-changes">breaking changes</a> to be aware of:
 
 ### _New_  Major upgrade for `core-list`
 
@@ -54,31 +54,41 @@ The new `core-list` system sees immensely improved scrolling performance on all 
 
 ### _New_  Introducing `core-image`
 
-The new `core-image` element provides useful options for sizing and preloading behavior not found in your vanilla `<img>` tag.
+The new `core-image` element provides useful options for preloading and sizing behavior not found in your vanilla `<img>` tag.
 
-Options include:
-- `sizing`: Displays the image as either cropped (`cover`) or letterboxed (`contain`)
+Features include:
+
 - `preload`: Prevents the browser from rendering the image until it is fully loaded. The element's `background-color` can be set as a placeholder, or its `placeholder` property can be set to a URL or data-URI for a placeholder image.
 - `fade`: When `preload` is set, causes the placeholder to fade out and be replaced by the rendered image.
+- `sizing`: Displays the image as either cropped (`cover`) or letterboxed (`contain`)
 
 Your basic image:
 {% raw %}
-    <core-image src="http://lorempixel.com/400/400"></core-image>
-{% endraw %}
-
-Letterboxed:
-{% raw %}
-    <core-image style="width:400px; height:400px" sizing="contain" src="http://lorempixel.com/600/400"></core-image>
+    <core-image src="http://lorempixel.com/400/400">
+    </core-image>
 {% endraw %}
 
 A light-gray background fading in to the image:
 {% raw %}
-    <core-image style="width:400px; height:400px; background-color: lightgray;" sizing="cover" preload fade src="http://lorempixel.com/600/400"></core-image>
+    <core-image style="width:400px; height:400px; background-color: lightgray;" 
+                sizing="cover" 
+                preload 
+                fade 
+                src="http://lorempixel.com/600/400">
+    </core-image>
 {% endraw %}
 
-### Breaking changes to `paper-button`
+Letterboxed:
+{% raw %}
+    <core-image style="width:400px; height:400px" 
+                sizing="contain" 
+                src="http://lorempixel.com/600/400">
+    </core-image>
+{% endraw %}
 
-A few API changes to `paper-button` to make it simpler and more consistent:
+### Breaking changes to `paper-button` <a name="breaking-changes">&nbsp;</a>
+
+There are a few important breaking API changes to `paper-button` to make it simpler and more consistent:
 
 - `raisedButton` attribute is now just `raised`
 - `icon` and `label` attributes are deprecated. Use `<core-icon>` inside the `paper-button`, and put the label in light DOM.
@@ -92,10 +102,16 @@ Here's an example of the changes at work:
     </paper-button>
 {% endraw %}
 
+These changes add greater flexibility to the component, and make adding a11y features much more straightforward.
+
+As Polymer and the Elements are both in Developer Preview, these types of changes will come relatively frequently - though we don't make breaking changes lightly as we're trying to nail down the right developer handles for these elements.
+
+We'll do our best to continue specifically calling out these types of changes as the elements evolve.
+
 ### `paper-tooltip` now more accessible, keyboard, and mobile friendly
 
 The `paper-tooltip` now extends `paper-focusable`, to get down/disabled/keyboard states.
 
 ### `core-doc-viewer` element docs now gain deep links into method/props/events sections
 
-Now built-in support for in-URL fragment identifiers.
+Now built-in support for in-URL fragment identifiers. [See the PR](https://github.com/Polymer/core-doc-viewer/pull/26) for more information and sample URLs.
