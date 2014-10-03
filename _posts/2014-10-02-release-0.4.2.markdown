@@ -121,3 +121,7 @@ Struggling to debug your custom elements, and ending up with the dreaded blank p
 
 Did you know you can use `Polymer.mixin` to provide shared behavior between Polymer objects? Or that you can dynamically import HTML files with `Polymer.import`? Learn about Polymer's many useful helper methods on the new [Polymer Helper Methods](http://www.polymer-project.org/docs/polymer/helpers.html) docs page.
 
+### We're fully on the HTTPS train
+
+Access your Polymer securely, at [https://www.polymer-project.org](https://www.polymer-project.org) and [https://blog.polymer-project.org](https://blog.polymer-project.org). 
+
