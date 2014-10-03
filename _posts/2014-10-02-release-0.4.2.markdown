@@ -15,7 +15,7 @@ Lots of new element features included in this release, as well as some <a href="
 
 _Changed template model structure_
 
-Item templates in the list now bind to template models structured as follows:
+Item templates in the list now bind to template models, structured as:
 
 {% raw %}
     {
@@ -112,6 +112,3 @@ We'll do our best to continue specifically calling out these types of changes as
 
 The `paper-tooltip` now extends `paper-focusable`, to get down/disabled/keyboard states.
 
-### `core-doc-viewer` element docs now gain deep links into method/props/events sections
-
-Now built-in support for in-URL fragment identifiers. [See the PR](https://github.com/Polymer/core-doc-viewer/pull/26) for more information and sample URLs.
