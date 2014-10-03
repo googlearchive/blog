@@ -62,13 +62,19 @@ Options include:
 - `fade`: When `preload` is set, causes the placeholder to fade out and be replaced by the rendered image.
 
 Your basic image:
+{% raw %}
     <core-image src="http://lorempixel.com/400/400"></core-image>
+{% endraw %}
 
 Letterboxed:
+{% raw %}
     <core-image style="width:400px; height:400px" sizing="contain" src="http://lorempixel.com/600/400"></core-image>
+{% endraw %}
 
 A light-gray background fading in to the image:
+{% raw %}
     <core-image style="width:400px; height:400px; background-color: lightgray;" sizing="cover" preload fade src="http://lorempixel.com/600/400"></core-image>
+{% endraw %}
 
 ### Breaking changes to `paper-button`
 
