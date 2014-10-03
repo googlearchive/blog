@@ -1,0 +1,95 @@
+---
+layout: post
+title:  "Polymer 0.4.2 Released!"
+date:   2014-10-02 21:17:00
+categories: releases
+author: polymer-team
+---
+_We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
+
+Lots of new element features included in this release, as well as some breaking changes to be aware of:
+
+### _New_  Major upgrade for `core-list`
+
+`core-list` like you've never seen it before. This release includes a major performance and feature upgrade for `core-list`, which includes an API change.
+
+_Changed template model structure_
+
+Item templates in the list now bind to template models structured as follows:
+
+{% raw %}
+    {
+        index: 0,           // list index for this item
+        selected: false,    // selection state for this item
+        model: {            // user data corresponding to data[index]
+            /* user data */
+        }
+    }
+{% endraw %}
+
+So given the following data:
+
+{% raw %}
+    var data = [
+        {name: 'Bob', checked: true},
+        {name: 'Tim', checked: false}
+        ...
+    ]
+{% endraw %}
+
+You could render the list as follows, where the `name` and `checked` properties will be bound from the `model` object:
+
+{% raw %}
+    <core-list data="{{data}}" height="80">
+        <template>
+            <div class="{{ {selected: selected} | tokenList }}">
+                List row: {{ index }}, Name: {{ model.name }} 
+                <input type="checkbox" checked="{{ model.checked }}">
+            </div>
+        </template>
+    </core-list>
+{% endraw %}
+
+The new `core-list` system sees immensely improved scrolling performance on all platforms.
+
+### _New_  Introducing `core-image`
+
+The new `core-image` element provides useful options for sizing and preloading behavior not found in your vanilla `<img>` tag.
+
+Options include:
+- `sizing`: Displays the image as either cropped (`cover`) or letterboxed (`contain`)
+- `preload`: Prevents the browser from rendering the image until it is fully loaded. The element's `background-color` can be set as a placeholder, or its `placeholder` property can be set to a URL or data-URI for a placeholder image.
+- `fade`: When `preload` is set, causes the placeholder to fade out and be replaced by the rendered image.
+
+Your basic image:
+    <core-image src="http://lorempixel.com/400/400"></core-image>
+
+Letterboxed:
+    <core-image style="width:400px; height:400px" sizing="contain" src="http://lorempixel.com/600/400"></core-image>
+
+A light-gray background fading in to the image:
+    <core-image style="width:400px; height:400px; background-color: lightgray;" sizing="cover" preload fade src="http://lorempixel.com/600/400"></core-image>
+
+### Breaking changes to `paper-button`
+
+A few API changes to `paper-button` to make it simpler and more consistent:
+
+- `raisedButton` attribute is now just `raised`
+- `icon` and `label` attributes are deprecated. Use `<core-icon>` inside the `paper-button`, and put the label in light DOM.
+
+Here's an example of the changes at work:
+
+{% raw %}
+    <paper-button raised>
+        <core-icon icon="arrow"></core-icon>
+        My button
+    </paper-button>
+{% endraw %}
+
+### `paper-tooltip` now more accessible, keyboard, and mobile friendly
+
+The `paper-tooltip` now extends `paper-focusable`, to get down/disabled/keyboard states.
+
+### `core-doc-viewer` element docs now gain deep links into method/props/events sections
+
+Now built-in support for in-URL fragment identifiers.
