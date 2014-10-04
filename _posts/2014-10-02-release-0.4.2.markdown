@@ -91,7 +91,8 @@ Letterboxed:
 There are a few important breaking API changes to `paper-button` to make it simpler and more consistent:
 
 - `raisedButton` attribute is now just `raised`
-- `icon` and `label` attributes are deprecated. Use `<core-icon>` inside the `paper-button`, and put the label in light DOM.
+- `label` attribute is now deprecated. The new usage is to put the label in light DOM.
+- `icon` attribute has been removed. The new usage is to put a `core-icon` inside of the `paper-button`. 
 
 Here's an example of the changes at work:
 
