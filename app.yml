@@ -19,17 +19,20 @@ handlers:
 - url: /$
   static_files: _site/index.html
   upload: _site/index\.html
+  secure: always
 
 # Map raw paths with trailing "/" to an index.html file.
 - url: /(.*)/$
   static_files: _site/\1/index.html
   upload: _site/(.*)/index.html
+  secure: always
 
 # All other URLs map directly to their path in _site/.
 - url: /
   static_dir: _site
   http_headers:
     Access-Control-Allow-Origin: "*"
+  secure: always
 
 skip_files:
 - ^(.*/)?app\.yaml
