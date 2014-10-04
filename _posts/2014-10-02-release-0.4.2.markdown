@@ -108,9 +108,9 @@ As Polymer and the Elements are both in Developer Preview, these types of change
 
 We'll do our best to continue specifically calling out these types of changes as the elements evolve.
 
-### `paper-tooltip` now more accessible, keyboard, and mobile friendly
+### `core-tooltip` now more accessible, keyboard, and mobile friendly
 
-The `paper-tooltip` now extends `paper-focusable`, to get down/disabled/keyboard states.
+The `core-tooltip` now extends `paper-focusable`, to get down/disabled/keyboard states.
 
 
 ### New Polymer guides: Debugging tips and tricks and Polymer helper methods
