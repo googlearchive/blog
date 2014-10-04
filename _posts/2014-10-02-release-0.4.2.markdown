@@ -115,7 +115,7 @@ The `paper-tooltip` now extends `paper-focusable`, to get down/disabled/keyboard
 
 ### New Polymer guides: Debugging tips and tricks and Polymer helper methods
 
-We've added two helpful new documentation guides to the Polymer site, on [Debugging Tips and Tricks](http://www.polymer-project.org/docs/polymer/debugging.html) and [Polymer Helper Methods](http://www.polymer-project.org/docs/polymer/helpers.html)
+We've added two helpful new documentation guides to the Polymer site, on [Debugging Tips and Tricks](http://www.polymer-project.org/docs/polymer/debugging.html) and [Polymer Helper Methods](http://www.polymer-project.org/docs/polymer/helpers.html).
 
 Struggling to debug your custom elements, and ending up with the dreaded blank page? [Debugging tips and tricks](http://www.polymer-project.org/docs/polymer/debugging.html) walks through the most important tools to help you get your Polymer project running smoothly.
 
