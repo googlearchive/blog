@@ -32,6 +32,9 @@ authors:
     arthur:
         display_name: arthur
         github: arthurevans
+    rob:
+        display_name: rob
+        github: robdodson
 
 # Serve settings
 # detach: true
