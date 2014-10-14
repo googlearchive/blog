@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Polymer Polytechnics this Fall"
+title:  "Polymer Polytechnics this November"
 date:   2014-10-09 13:31:00
 categories: events
 author: rob
