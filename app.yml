@@ -21,6 +21,12 @@ handlers:
   upload: _site/index\.html
   secure: always
 
+# Map the feed.xml file to non-SSL
+- url: /feed.xml
+  static_files: _site/feed.xml
+  upload: _site/feed\.xml
+  secure: optional
+
 # Map raw paths with trailing "/" to an index.html file.
 - url: /(.*)/$
   static_files: _site/\1/index.html
