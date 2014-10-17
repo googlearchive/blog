@@ -38,8 +38,6 @@ As more and more libraries are using the Web Components polyfills, `webcomponent
 
 The Polymer library is in Developer Preview and purposefully future-facing - we’re focused on making responsible long-term choices that set Polymer and Web Components on a promising path and shedding technical debt as early as we can. The road to a better web is fraught with hard decisions and breaking leaps, and we’re only just beginning our journey - but we’re confident that not being afraid to trade short-term hurdles for long term gains and being radically transparent about how these decisions are made will mean an order of magnitude better experience and health of the ecosystem in the long run.
 
-Polymer is lucky to have a community of developers that are deeply engaged in helping make these choices and passionate about making the web a better place to develop, and we seek as a project to fundamentally embody the democratic promise that Web Components provides.
-
 We’ll make sure to highlight this again when the actual release happens - we wanted to give everyone a heads-up that it was coming down the line.
 
 As usual, please feel free to Tweet us [@polymer](https://twitter.com/polymer) to let us know your thoughts or about any project you’ve been working on using Polymer, and to contribute to the [Github](https://github.com/polymer) with pull requests and issues. Feel free to check out the new [webcomponents.js dev repo](https://github.com/polymer/webcomponentsjs-dev) and the main [polymer library dev repo](https://github.com/polymer/polymer-dev).
