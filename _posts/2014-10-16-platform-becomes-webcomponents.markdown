@@ -8,7 +8,7 @@ author: polymer-team
 
 We wanted to give developers an early heads up for a pretty big change coming down the line: the `platform.js` file that contains the Web Components polyfills will be renamed to `webcomponents.js`.
 
-The Polymer team has been doing a lot of work to make a clean separation between where the Web Components polyfills end and the Polymer library begins. On Chrome, the `webcomponents.js` layer is no longer needed at all - everything Polymer needs to function is baked natively into Chrome 36 and onward.
+The Polymer team has been doing a lot of work to make a clean separation between where the Web Components polyfills end and the Polymer library begins. On Chrome and Opera, the `webcomponents.js` layer is no longer needed at all — everything Polymer needs to function is baked natively into Chrome 36+ and Opera 23+.
 
 ### What exactly is happening?
 
