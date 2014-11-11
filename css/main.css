@@ -44,7 +44,7 @@ a:visited {
 }
 
 /* Utility */
-/* line 28, ../_sass/_base.scss */
+/* line 27, ../_sass/_base.scss */
 .wrap:before,
 .wrap:after {
   content: "";
@@ -75,7 +75,7 @@ a:visited {
   background-color: white;
 }
 
-/* line 52, ../_sass/_base.scss */
+/* line 50, ../_sass/_base.scss */
 .site-title,
 .site-title:hover,
 .site-title:visited {
@@ -165,7 +165,7 @@ a:visited {
   list-style: none;
 }
 
-/* line 119, ../_sass/_base.scss */
+/* line 118, ../_sass/_base.scss */
 .site-footer li,
 .site-footer p {
   font-size: 15px;
@@ -173,7 +173,7 @@ a:visited {
   color: #828282;
 }
 
-/* line 126, ../_sass/_base.scss */
+/* line 125, ../_sass/_base.scss */
 .github-icon-svg,
 .twitter-icon-svg {
   display: inline-block;
@@ -254,7 +254,7 @@ a:visited {
   margin: 20px 0;
 }
 
-/* line 194, ../_sass/_base.scss */
+/* line 189, ../_sass/_base.scss */
 .post-content h1,
 .post-content h2,
 .post-content h3,
@@ -295,13 +295,13 @@ a:visited {
   margin: 30px 0;
 }
 
-/* line 226, ../_sass/_base.scss */
+/* line 225, ../_sass/_base.scss */
 .post-content ul,
 .post-content ol {
   padding-left: 20px;
 }
 
-/* line 229, ../_sass/_base.scss */
+/* line 228, ../_sass/_base.scss */
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;
@@ -319,7 +319,7 @@ a:visited {
   padding: 1px 5px;
 }
 
-/* line 243, ../_sass/_base.scss */
+/* line 242, ../_sass/_base.scss */
 .post ul,
 .post ol {
   margin-left: 1.35em;
@@ -525,19 +525,19 @@ a:visited {
 /* Literal.Number */
 /* line 293, ../_sass/_base.scss */
 .highlight .s {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String */
 /* line 294, ../_sass/_base.scss */
 .highlight .na {
-  color: teal;
+  color: #008080;
 }
 
 /* Name.Attribute */
 /* line 295, ../_sass/_base.scss */
 .highlight .nb {
-  color: #0086b3;
+  color: #0086B3;
 }
 
 /* Name.Builtin */
@@ -550,13 +550,13 @@ a:visited {
 /* Name.Class */
 /* line 297, ../_sass/_base.scss */
 .highlight .no {
-  color: teal;
+  color: #008080;
 }
 
 /* Name.Constant */
 /* line 298, ../_sass/_base.scss */
 .highlight .ni {
-  color: purple;
+  color: #800080;
 }
 
 /* Name.Entity */
@@ -582,13 +582,13 @@ a:visited {
 /* Name.Namespace */
 /* line 302, ../_sass/_base.scss */
 .highlight .nt {
-  color: navy;
+  color: #000080;
 }
 
 /* Name.Tag */
 /* line 303, ../_sass/_base.scss */
 .highlight .nv {
-  color: teal;
+  color: #008080;
 }
 
 /* Name.Variable */
@@ -630,49 +630,49 @@ a:visited {
 /* Literal.Number.Oct */
 /* line 310, ../_sass/_base.scss */
 .highlight .sb {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Backtick */
 /* line 311, ../_sass/_base.scss */
 .highlight .sc {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Char */
 /* line 312, ../_sass/_base.scss */
 .highlight .sd {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Doc */
 /* line 313, ../_sass/_base.scss */
 .highlight .s2 {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Double */
 /* line 314, ../_sass/_base.scss */
 .highlight .se {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Escape */
 /* line 315, ../_sass/_base.scss */
 .highlight .sh {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Heredoc */
 /* line 316, ../_sass/_base.scss */
 .highlight .si {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Interpol */
 /* line 317, ../_sass/_base.scss */
 .highlight .sx {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Other */
@@ -684,7 +684,7 @@ a:visited {
 /* Literal.String.Regex */
 /* line 319, ../_sass/_base.scss */
 .highlight .s1 {
-  color: #dd1144;
+  color: #d14;
 }
 
 /* Literal.String.Single */
@@ -702,19 +702,19 @@ a:visited {
 /* Name.Builtin.Pseudo */
 /* line 322, ../_sass/_base.scss */
 .highlight .vc {
-  color: teal;
+  color: #008080;
 }
 
 /* Name.Variable.Class */
 /* line 323, ../_sass/_base.scss */
 .highlight .vg {
-  color: teal;
+  color: #008080;
 }
 
 /* Name.Variable.Global */
 /* line 324, ../_sass/_base.scss */
 .highlight .vi {
-  color: teal;
+  color: #008080;
 }
 
 /* Name.Variable.Instance */
@@ -832,7 +832,7 @@ a:visited {
     padding-left: 10px;
   }
 
-  /* line 402, ../_sass/_base.scss */
+  /* line 401, ../_sass/_base.scss */
   .post-content ul,
   .post-content ol {
     padding-left: 10px;
@@ -860,4 +860,14 @@ a:visited {
 /* line 12, ../_sass/main.scss */
 .single-post h1 {
   margin-bottom: 25px;
+}
+
+/* line 16, ../_sass/main.scss */
+.posts li {
+  margin-bottom: 0px;
+}
+
+/* line 20, ../_sass/main.scss */
+.posts ul {
+  list-style-type: circle;
 }

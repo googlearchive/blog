@@ -9,7 +9,7 @@ _We announce significant releases here on the blog, highlighting the major new f
 
 Lots of new element features included in this release, as well as some <a href="#breaking-changes">breaking changes</a> to be aware of:
 
-### _New_  Major upgrade for `core-list`
+### <a href="0-4-2_corelist"></a>_New_  Major upgrade for `core-list`
 
 `core-list` like you've never seen it before. This release includes a major performance and feature upgrade for `core-list`, which includes an API change.
 
