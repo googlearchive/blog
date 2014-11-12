@@ -53,9 +53,9 @@ We'll be releasing a more detailed overview on how you can use Web Component Tes
 `core-list` just [keeps on getting better](/releases/2014/10/02/release-0.4.2/#0-4-2_corelist). Highlights of the latest improvements:
 
 - Supports variable height.
-- Adds a new _experimental_ grid layout with the `grid` property.
+- Adds a new _experimental_ grid layout with the [`grid` property](https://www.polymer-project.org/components/core-docs/index.html#core-list.attributes.grid).
 - Height property is no longer required.
-- Adds a new `groups` property.
+- Adds a new [`groups`](https://www.polymer-project.org/components/core-docs/index.html#core-list.attributes.groups) property.
 - For extreme perf tuning cases, `sizingHeight` and `runwayFactor` are two new properties available as handles on the variable height algorithm, though the defaults should serve perfectly well in the vast majority of cases.
 
 Check out all of these new features in the [demos folder of the core-list repository](https://github.com/Polymer/core-list/tree/master/demos).
@@ -109,19 +109,21 @@ We heard lots of feedback on `core-input`, and with this release hopefully makes
 
 - `<core-input>` is now `<input is="core-input">` with a `committedValue` availability.
 - There is no longer a `<core-input multiline>`.
-- With this in mind, `<paper-input>` is updated to come with an `<input is="core-input">`
+- With this in mind, `<paper-input>` now uses `<input is="core-input">` under the hood.
 - `<paper-input>` now also includes a `<paper-input-decorator>` to get all the goodness of `<paper-input>` without having to use the element itself.
 
 For example:
 
 {% raw %}
     <paper-input-decorator>
-        <input type="someType">
+        <input type="date">
     </paper-input-decorator>
 {% endraw %}
 
+Using `<paper-input-decorator>` around an `<input>` element - instead of just `<paper-input>` - allows you to take advantage of built-in selectors for certain input types: the example above uses the `date` type.  With great power comes great responsibility however - we recommend only using this for text-based [input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input#attr-type).
+
 ## <a name="0-5-0_coredropdownmenu"></a>_Breaking_ `<core-dropdown-menu>`, `<paper-dropdown-menu>` child structure
-With this release of `<core-dropdown-menu>` and `<paper-dropdown-menu>`, you must now nest a `<core-dropdown>` or other overlay and a `<core-selector>` or other selector element as children of these elements.
+With this release, the `<core-dropdown-menu>` and `<paper-dropdown-menu>` elements now rely on the `<core-dropdown>` and `<core-selector>` elements to implement a dropdown menu. The `<core-dropdown>` serves as the container for the dropdown menu, and the `<core-selector>` organizes the menu items. Of course, you can use elements that inherit from `<core-dropdown>` and `<core-selector>` as well, such as `<paper-dropdown>` and `<core-menu>` respectively.
 
 This greatly improves styling support and flexibility, enables the `layered` attribute, and simplifies the façading of the internal selector properties.
 
@@ -129,10 +131,10 @@ This enables something like:
 
 {% raw %}
     <paper-dropdown-menu label="Your favorite pastry">
-        <paper-dropdown layered class="dropdown">
-            <core-menu class="menu">
-                <template repeat="{{pastries}}">
-                    <paper-item>{{}}</paper-item>
+        <paper-dropdown layered>
+            <core-menu>
+                <template repeat="{{pastry in pastries}}">
+                    <paper-item>{{pastry}}</paper-item>
                 </template>
             </core-menu>
         </paper-dropdown>
@@ -152,8 +154,8 @@ This makes it much more flexible, as you can drop in whatever button or control 
         </paper-button>
         <paper-dropdown class="dropdown">
             <core-menu class="menu">
-                <template repeat="{{pastries}}">
-                    <paper-item>{{}}</paper-item>
+                <template repeat="{{pastry in pastries}}">
+                    <paper-item>{{pastry}}</paper-item>
                 </template>
             </core-menu>
         </paper-dropdown>
@@ -173,3 +175,4 @@ The `firebase-element` is mostly API-compatible with the previous version, with 
 - User auth object and security rules auth object data  varies compared to the previous Firebase API.
 
 
+Phew, lots of exciting updates here. Check out the [full release notes](https://github.com/Polymer/polymer/releases/tag/0.5.0) for even more detail.
