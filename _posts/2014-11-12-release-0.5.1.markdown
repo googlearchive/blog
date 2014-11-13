@@ -109,10 +109,10 @@ Also, it uses transitions from `<core-transition-css>` as opposed to `<paper-dia
 ## <a name="0-5-1_coreinput"></a>_Breaking_ Major `core-input` changes
 We heard lots of feedback on `core-input`, and with this release hopefully makes it much more straightforward and cleaner to use. There are a number of updates:
 
-- `<core-input>` is now `<input is="core-input">` with a `committedValue` availability.
-- There is no longer a `<core-input multiline>`.
+- `<core-input>` is now used as `<input is="core-input">` with a `committedValue` availability. `<core-input>` on its own is no longer a thing.
+- As such, there is no longer a `<core-input multiline>`.
 - With this in mind, `<paper-input>` now uses `<input is="core-input">` under the hood.
-- `<paper-input>` now also includes a `<paper-input-decorator>` to get all the goodness of `<paper-input>` without having to use the element itself.
+- `<paper-input>` now also includes a `<paper-input-decorator>` to get all the goodness of `<paper-input>` without having to use the element itself. This is particularly useful if you want to use a paper-styled input inside a regular `<form>`: wrapping an `<input>` element with `<paper-input-decorator>` will give you the styling and still let the value be submit as usual with the standard `<form>`. The `<paper-input>` element doesn't submit within the `<form>` element - the best practice is to use `<paper-input>` with a more modern XHR approach to submitting data, such as with the [`<ajax-form>`](http://garstasio.github.io/ajax-form/components/ajax-form/) element.
 
 For example:
 
