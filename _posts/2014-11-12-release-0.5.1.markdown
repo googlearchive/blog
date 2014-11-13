@@ -8,7 +8,7 @@ author: polymer-team
 
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
 
-Exciting news - Polymer 0.5.1 is now released! This release corrects a regression 0.5.0, and the two together represent lots of exciting changes. This one even gets its own table of contents:
+Exciting news - Polymer 0.5.1 is now released! This release corrects a regression 0.5.0, and the two together represent lots of updates and fixes. This one even gets its own table of contents:
 
 * [_Breaking_ `platform.js` becomes `webcomponents.js`](#0-5-1_platform)
 * [_Breaking_ `polymer.html` includes the unminified, concatenated source](#0-5-1_polymerhtml)
@@ -21,12 +21,12 @@ Exciting news - Polymer 0.5.1 is now released! This release corrects a regressio
 * [_Breaking_ `<core-dropdown-menu>`, `<paper-dropdown-menu>` child structure](#0-5-1_coredropdownmenu)
 * [_Breaking_ BYOB (Bring Your Own Button) to `<core-menu-button>` and `<paper-menu-button>`](#0-5-1_coremenubutton)
 * [_Breaking/Improved_ `core-ajax`](#0-5-1_coreajax)
-* [_Breaking_ `firebase_element`](#0-5-1_firebase)
+* [_Breaking_ `firebase-element`](#0-5-1_firebase)
 * [_Breaking_ `paper-item` changes](#0-5-1_paperitem)
 * [_Fixed_ `polymer` disabled dirty-check when hidden](#0-5-1_polymer)
 
 ## <a name="0-5-1_platform"></a>_Breaking_ `platform.js` becomes `webcomponents.js`
-As [announced previously](/announcements/2014/10/16/platform-becomes-webcomponents/) and now coming to fruition with the 0.5.0 release, the polyfills file formerly known `platform.js` is now called `webcomponents.js`. The repository and bower package is `Polymer/webcomponentsjs`.
+As [announced previously](/announcements/2014/10/16/platform-becomes-webcomponents/) and now coming to fruition, the polyfills file formerly known `platform.js` is now called `webcomponents.js`. The repository and bower package is `Polymer/webcomponentsjs`.
 
 The Polymer team is fundamentally committed to the Web Components community, and we hope that this rename will be an important step in broadening the accessibility of the Polyfills and improving clarity around what they do.
 
