@@ -1,0 +1,186 @@
+---
+layout: post
+title:  "Introducing Polymer 0.5.1"
+date:   2014-11-12 14:44:00
+categories: releases
+author: polymer-team
+---
+
+_We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
+
+Exciting news - Polymer 0.5.1 is now released! This release corrects a regression 0.5.0, and the two together represent lots of exciting changes. This one even gets its own table of contents:
+
+* [_Breaking_ `platform.js` becomes `webcomponents.js`](#0-5-1_platform)
+* [_Breaking_ `polymer.html` includes the unminified, concatenated source](#0-5-1_polymerhtml)
+* [_New_ `WebComponentTester`](#0-5-1_wct)
+* [_Vastly Improved/Breaking Change_ `core-list`](#0-5-1_corelist)
+* [_New_ `core-scroll-threshold`](#0-5-1_corescrollthreshold)
+* [_New_ Introducing: `<paper-dropdown>`](#0-5-1_paperdropdown)
+* [_Breaking_ `<paper-dialog>` becomes two](#0-5-1_paperdialog)
+* [_Breaking_ Major `core-input` changes](#0-5-1_coreinput)
+* [_Breaking_ `<core-dropdown-menu>`, `<paper-dropdown-menu>` child structure](#0-5-1_coredropdownmenu)
+* [_Breaking_ BYOB (Bring Your Own Button) to `<core-menu-button>` and `<paper-menu-button>`](#0-5-1_coremenubutton)
+* [_Breaking/Improved_ `core-ajax`](#0-5-1_coreajax)
+* [_Breaking_ `firebase_element`](#0-5-1_firebase)
+* [_Breaking_ `paper-item` changes](#0-5-1_paperitem)
+* [_Fixed_ `polymer` disabled dirty-check when hidden](#0-5-1_polymer)
+
+## <a name="0-5-1_platform"></a>_Breaking_ `platform.js` becomes `webcomponents.js`
+As [announced previously](/announcements/2014/10/16/platform-becomes-webcomponents/) and now coming to fruition with the 0.5.0 release, the polyfills file formerly known `platform.js` is now called `webcomponents.js`. The repository and bower package is `Polymer/webcomponentsjs`.
+
+The Polymer team is fundamentally committed to the Web Components community, and we hope that this rename will be an important step in broadening the accessibility of the Polyfills and improving clarity around what they do.
+
+Our [previous post](/announcements/2014/10/16/platform-becomes-webcomponents/) goes into detail on the reasoning behind the name change - the important things to know for this release are:
+
+- All references in your code to `platform.js` should be updated to reference `webcomponents.js`. For example, every `<script src="/components/platform/platform.js">` should change to `<script src="/components/webcomponentsjs/webcomponents.min.js">`; or for the unminified source: `<script src="/components/webcomponentsjs/webcomponents.js">`.
+- Update to the latest file with `bower install webcomponentsjs` or change your bower dependency from `"platform": "Polymer/platform#^0.4.2"` to `"webcomponentsjs": "Polymer/webcomponentsjs#^0.5.0"`.
+
+## <a name="0-5-1_polymerhtml"></a>_Breaking_ `polymer.html` contains concatenated, unminified source.
+The [polymer.html](https://github.com/Polymer/polymer/blob/master/polymer.html) file, known to many for its role in the very important `<link rel="import" href="../bower_components/polymer/polymer.html">`, now loads the concatenated but unminified source files of its dependencies.
+
+This mean significantly easier development, as you'll have full access to complete source all the way down your stacktrace.
+
+As a quick relevant reminder: the [Vulcanize tool](https://github.com/polymer/vulcanize) is your friend when building your site to use in production, as without vulcanizing you'll have a whole slew of network hits to load all of Polymer's dependencies. For more on how to use Vulcanize, check out [Concatenating Web Components with Vulcanize](https://www.polymer-project.org/articles/concatenating-web-components.html).
+
+If you'd like to develop from the concatenated `polymer.js` file from the start, you can change the reference to `polymer.js` inside the `polymer.html` import to reference `polymer.min.js`.
+
+## <a name="0-5-1_wct"></a>_New_ `WebComponentTester` 
+Everyone _loves_ tests, but it has traditionally been a little annoying to test polymer elements. As part of this release, we are also introducing a test runner that aims to make testing web components moar awesomer: [web-component-tester](https://github.com/Polymer/web-component-tester).
+
+WCT sets up a test environment with tools that many of us know and love (Mocha, Chai, Sinon.JS, async.js, etc.), and wraps them up in a world where .html tests are supported as first class citizens. With this in place, we've been adding more and more tests to our elements, and have been really enjoying the improved experience when writing them - we hope you will too.
+
+We'll be releasing a more detailed overview on how you can use Web Component Tester shortly - keep an eye out on this blog for more info!
+
+## <a name="0-5-1_corelist"></a>_Vastly Improved/Breaking Change_ `core-list`
+`core-list` just [keeps on getting better](/releases/2014/10/02/release-0.4.2/#0-4-2_corelist). Highlights of the latest improvements:
+
+- Supports variable height.
+- Adds a new _experimental_ grid layout with the [`grid` property](https://www.polymer-project.org/components/core-docs/index.html#core-list.attributes.grid).
+- Height property is no longer required.
+- Adds a new [`groups`](https://www.polymer-project.org/components/core-docs/index.html#core-list.attributes.groups) property.
+- For extreme perf tuning cases, `sizingHeight` and `runwayFactor` are two new properties available as handles on the variable height algorithm, though the defaults should serve perfectly well in the vast majority of cases.
+
+Check out all of these new features in the [demos folder of the core-list repository](https://github.com/Polymer/core-list/tree/master/demos).
+
+## <a name="0-5-1_corescrollthreshold"></a>_New_ `core-scroll-threshold`
+A new `core-scroll-threshold` element that allows for the implementation of lazy-loading list patterns. Use it to bind an event handler to a certain scroll threshold, that will get a callback when the threshold is tripped. As a rough example of the kind of things you can use it for:
+
+{% raw %}
+    <polymer-element name="x-list">
+        <template>
+            <core-scroll-threshold id="threshold" scrollTarget="{{$.scroller}}" lowerThreshold="100" on-lower-trigger="{{loadMore}}" fit></core-scroll-threshold>
+            <div id="scroller" fit>
+                <template repeat="{{i in data}}">
+                    <div class="thing">{{i}}</div>
+                </template>
+                <div hidden?="{{!$.threshold.lowerTriggered}}">Please wait...</div>
+            </div>
+        </template>
+
+        <script>
+            Polymer({
+                loadMore: function() {
+                    /* make AJAX load call here using core-ajax, etc. */
+                }
+            });
+        </script>
+    </polymer-element>
+{% endraw %}
+
+## <a name="0-5-1_paperdropdown"></a>_New_ Introducing: `<paper-dropdown>`
+A new element: material design-styled dropdown with an included transition.
+
+Check out its [repository](https://github.com/Polymer/paper-dropdown).
+
+## <a name="0-5-1_paperdialog"></a>_Breaking_ `<paper-dialog>` becomes two
+The `<paper-dialog>` element has been broken into two elements: a `<paper-dialog>` for a plain dialog, and a `<paper-action-dialog>` for a dialog with a scrollable body and row of buttons at the bottom.
+
+This inherits from `<core-overlay>`, and its size can be styled with `paper-dialog::shadow #scroller`.
+
+Also, it uses transitions from `<core-transition-css>` as opposed to `<paper-dialog-transition>`. For example:
+
+    <paper-action-dialog heading="Confirmation" transition="core-transition-center">
+        <p>This thing you are doing can take some effect that is unintended. Are you sure you want to do this thing?</p>
+        <paper-button dismissive>No wait stop</paper-button>
+        <paper-button affirmative autofocus>Yes do it</paper-button>
+    </paper-action-dialog>
+
+
+## <a name="0-5-1_coreinput"></a>_Breaking_ Major `core-input` changes
+We heard lots of feedback on `core-input`, and with this release hopefully makes it much more straightforward and cleaner to use. There are a number of updates:
+
+- `<core-input>` is now `<input is="core-input">` with a `committedValue` availability.
+- There is no longer a `<core-input multiline>`.
+- With this in mind, `<paper-input>` now uses `<input is="core-input">` under the hood.
+- `<paper-input>` now also includes a `<paper-input-decorator>` to get all the goodness of `<paper-input>` without having to use the element itself.
+
+For example:
+
+{% raw %}
+    <paper-input-decorator>
+        <input type="date">
+    </paper-input-decorator>
+{% endraw %}
+
+Using `<paper-input-decorator>` around an `<input>` element - instead of just `<paper-input>` - allows you to take advantage of built-in selectors for certain input types: the example above uses the `date` type.  With great power comes great responsibility however - we recommend only using this for text-based [input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input#attr-type).
+
+## <a name="0-5-1_coredropdownmenu"></a>_Breaking_ `<core-dropdown-menu>`, `<paper-dropdown-menu>` child structure
+With this release, the `<core-dropdown-menu>` and `<paper-dropdown-menu>` elements now rely on the `<core-dropdown>` and `<core-selector>` elements to implement a dropdown menu. The `<core-dropdown>` serves as the container for the dropdown menu, and the `<core-selector>` organizes the menu items. Of course, you can use elements that inherit from `<core-dropdown>` and `<core-selector>` as well, such as `<paper-dropdown>` and `<core-menu>` respectively.
+
+This greatly improves styling support and flexibility, enables the `layered` attribute, and simplifies the façading of the internal selector properties.
+
+This enables something like:
+
+{% raw %}
+    <paper-dropdown-menu label="Your favorite pastry">
+        <paper-dropdown layered>
+            <core-menu>
+                <template repeat="{{pastry in pastries}}">
+                    <paper-item>{{pastry}}</paper-item>
+                </template>
+            </core-menu>
+        </paper-dropdown>
+    </paper-dropdown-menu>
+{% endraw %}
+
+## <a name="0-5-1_coremenubutton"></a>_Breaking_ BYOB (Bring Your Own Button) to `<core-menu-button>` and `<paper-menu-button>`
+Similar changes as to `<core-dropdown-menu>`, the `<core-menu-button>` and `<paper-menu-button>` now require that you provide your own button.
+
+This makes it much more flexible, as you can drop in whatever button or control you want, and have full control over it.  For example:
+
+{% raw %}
+    <paper-menu-button>
+        <paper-button noink>
+            <core-icon icon="add"></core-icon>
+            <span style="vertical-align:middle;">add</span>
+        </paper-button>
+        <paper-dropdown class="dropdown">
+            <core-menu class="menu">
+                <template repeat="{{pastry in pastries}}">
+                    <paper-item>{{pastry}}</paper-item>
+                </template>
+            </core-menu>
+        </paper-dropdown>
+    </paper-menu-button>
+{% endraw %}
+
+## <a name="0-5-1_coreajax"></a>_Breaking_/_Improving_ `core-ajax` changes
+The `auto` attibute on the `core-ajax` element now triggers requests when the body is changed and the method supports sending a body, such as `POST`, `PATCH`, etc.
+
+## <a name="0-5-1_firebase"></a>_Breaking_ Updates to `firebase-element`
+Updated to conform to breaking Firebase Login API change - previously the standalone ["Firebase Simple Login" API deprecation](https://github.com/firebase/firebase-simple-login#deprecation-warning).
+
+The `firebase-element` is mostly API-compatible with the previous version, with the following changes:
+
+- The `login` method arguments are now changed from `(provider, params)` to `(params, options)` - `provider` must be set via property. Added the `options` argument as required by certain providers.
+- OAuth callbacks in various providers must be updated to `v2` callback URL's, per the Firebase documentation. For more information on additional providers, check out the [provider documentation](https://www.firebase.com/docs/web/guide/user-auth.html#section-providers)
+- User auth object and security rules auth object data  varies compared to the previous Firebase API.
+
+## <a name="0-5-1_paperitem"></a>_Breaking_ `paper-item` changes
+You might be seeing a trend here - `paper-item` has been updated to be much more flexible, and rely on nested DOM for its label content instead of heavily using attributes. The `icon`, `iconSrc`, and `label` attributes have been removed, in favor of adding child elements that take care of this behavior.
+
+## <a name="0-5-1_polymer"></a>_Fixed_ `polymer` disabled dirty-check when hidden
+This fix should greatly improve browser performance and battery life overall for devices with hidden Polymer-based apps: the dirty-check loop is now disabled when the tab is hidden.
+
+
+Phew, lots of exciting updates here. Check out the [full release notes for 0.5.0](https://github.com/Polymer/polymer/releases/tag/0.5.0) and [0.5.1](https://github.com/Polymer/polymer/releases/tag/0.5.1) for even more detail.
