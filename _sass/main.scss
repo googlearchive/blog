@@ -20,3 +20,11 @@
 .posts ul {
     list-style-type: circle;
 }
+
+.post code {
+    overflow-wrap: break-word;
+}
+
+.post pre > code {
+    overflow-wrap: normal;
+}
