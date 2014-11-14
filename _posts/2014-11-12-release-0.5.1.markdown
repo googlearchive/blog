@@ -42,7 +42,7 @@ This mean significantly easier development, as you'll have full access to comple
 
 As a quick relevant reminder: the [Vulcanize tool](https://github.com/polymer/vulcanize) is your friend when building your site to use in production, as without vulcanizing you'll have a whole slew of network hits to load all of Polymer's dependencies. For more on how to use Vulcanize, check out [Concatenating Web Components with Vulcanize](https://www.polymer-project.org/articles/concatenating-web-components.html).
 
-If you'd like to develop from the concatenated `polymer.js` file from the start, you can change the reference to `polymer.js` inside the `polymer.html` import to reference `polymer.min.js`.
+If you'd like to develop from the minified `polymer.js` file from the start, you can change the reference to `polymer.js` inside the `polymer.html` import to reference `polymer.min.js`.
 
 ## <a name="0-5-1_wct"></a>_New_ `WebComponentTester` 
 Everyone _loves_ tests, but it has traditionally been a little annoying to test polymer elements. As part of this release, we are also introducing a test runner that aims to make testing web components moar awesomer: [web-component-tester](https://github.com/Polymer/web-component-tester).
