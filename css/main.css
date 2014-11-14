@@ -871,3 +871,13 @@ a:visited {
 .posts ul {
   list-style-type: circle;
 }
+
+/* line 24, ../_sass/main.scss */
+.post code {
+  overflow-wrap: break-word;
+}
+
+/* line 28, ../_sass/main.scss */
+.post pre > code {
+  overflow-wrap: normal;
+}
