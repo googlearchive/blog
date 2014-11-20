@@ -6,7 +6,7 @@ categories: announcements
 author: polymer-team
 ---
 
-We wanted to give developers an early heads up for a pretty big change coming down the line: the `platform.js` file that contains the Web Components polyfills will be renamed to `webcomponents.js`.
+We wanted to give developers an early heads up for a pretty big change coming down the line: the `platform.js` file that contains the Web Components polyfills will be renamed to `webcomponents.js` and transferred to [WebComponents.org](http://webcomponents.org/polyfills/).
 
 The Polymer team has been doing a lot of work to make a clean separation between where the Web Components polyfills end and the Polymer library begins. On Chrome and Opera, the `webcomponents.js` layer is no longer needed at all — everything Polymer needs to function is baked natively into Chrome 36+ and Opera 23+.
 
@@ -14,7 +14,7 @@ The Polymer team has been doing a lot of work to make a clean separation between
 
 * The `platform.js` file and repository will be renamed to `webcomponents.js`.
 * The `polymer` library and all the `core-*` and `paper-*` elements maintained by the Polymer team will be updated to reference this `webcomponents.js` file.
-* The new bower dependency for the polyfills will be `polymer/webcomponentsjs`.
+* The new bower dependency for the polyfills will be `webcomponents/webcomponentsjs`.
 
 ### When will this happen?
 
@@ -29,7 +29,7 @@ If you’re using `master`, you’ll begin seeing deprecation warnings if trying
 Whether or not you are on master, to stay up-to-date when the release occurs you'll need to:
 
 * Change all the references in your code from `platform.js` to `webcomponents.js`. For example, every `<script src="/components/platform/platform.js”>` should change to `<script src="/components/webcomponentsjs/webcomponents.js">`
-* Change your bower dependency from `"platform": "polymer/platform#^0.4.2"` to `"webcomponentsjs": "polymer/webcomponentsjs#^0.5.0"`.
+* Change your bower dependency from `"platform": "polymer/platform#^0.4.2"` to `"webcomponentsjs": "webcomponents/webcomponentsjs#^0.5.0"`.
 * Run `bower update` to update your elements to the latest version.
 
 ### Why are you making this change?
@@ -40,4 +40,4 @@ The Polymer library is in Developer Preview and purposefully future-facing - we�
 
 We’ll make sure to highlight this again when the actual release happens - we wanted to give everyone a heads-up that it was coming down the line.
 
-As usual, please feel free to Tweet us [@polymer](https://twitter.com/polymer) to let us know your thoughts or about any project you’ve been working on using Polymer, join the [polymer-dev mailing list](https://groups.google.com/forum/#!forum/polymer-dev), and contribute to the [Github](https://github.com/polymer) with pull requests and issues. Feel free to check out the new [webcomponents.js dev repo](https://github.com/polymer/webcomponentsjs-dev) and the main [polymer library dev repo](https://github.com/polymer/polymer-dev).
+As usual, please feel free to Tweet us [@polymer](https://twitter.com/polymer) to let us know your thoughts or about any project you’ve been working on using Polymer, join the [polymer-dev mailing list](https://groups.google.com/forum/#!forum/polymer-dev), and contribute to the [Github](https://github.com/polymer) with pull requests and issues. Feel free to check out the new [webcomponents.js repo](https://github.com/webcomponents/webcomponentsjs) and the main [polymer library repo](https://github.com/polymer/polymer).
