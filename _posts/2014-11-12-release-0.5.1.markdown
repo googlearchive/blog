@@ -26,14 +26,14 @@ Exciting news - Polymer 0.5.1 is now released! This release corrects a regressio
 * [_Fixed_ `polymer` disabled dirty-check when hidden](#0-5-1_polymer)
 
 ## <a name="0-5-1_platform"></a>_Breaking_ `platform.js` becomes `webcomponents.js`
-As [announced previously](/announcements/2014/10/16/platform-becomes-webcomponents/) and now coming to fruition, the polyfills file formerly known `platform.js` is now called `webcomponents.js`. The repository and bower package is `Polymer/webcomponentsjs`.
+As [announced previously](/announcements/2014/10/16/platform-becomes-webcomponents/) and now coming to fruition, the polyfills file formerly known `platform.js` is now called `webcomponents.js` and has been transferred to [WebComponents.org](http://webcomponents.org/polyfills/). The repository and bower package is `webcomponents/webcomponentsjs`.
 
 The Polymer team is fundamentally committed to the Web Components community, and we hope that this rename will be an important step in broadening the accessibility of the Polyfills and improving clarity around what they do.
 
 Our [previous post](/announcements/2014/10/16/platform-becomes-webcomponents/) goes into detail on the reasoning behind the name change - the important things to know for this release are:
 
 - All references in your code to `platform.js` should be updated to reference `webcomponents.js`. For example, every `<script src="/components/platform/platform.js">` should change to `<script src="/components/webcomponentsjs/webcomponents.min.js">`; or for the unminified source: `<script src="/components/webcomponentsjs/webcomponents.js">`.
-- Update to the latest file with `bower install webcomponentsjs` or change your bower dependency from `"platform": "Polymer/platform#^0.4.2"` to `"webcomponentsjs": "Polymer/webcomponentsjs#^0.5.0"`.
+- Update to the latest file with `bower install webcomponentsjs` or change your bower dependency from `"platform": "Polymer/platform#^0.4.2"` to `"webcomponentsjs": "webcomponents/webcomponentsjs#^0.5.0"`.
 
 ## <a name="0-5-1_polymerhtml"></a>_Breaking_ `polymer.html` contains concatenated, unminified source.
 The [polymer.html](https://github.com/Polymer/polymer/blob/master/polymer.html) file, known to many for its role in the very important `<link rel="import" href="../bower_components/polymer/polymer.html">`, now loads the concatenated but unminified source files of its dependencies.
