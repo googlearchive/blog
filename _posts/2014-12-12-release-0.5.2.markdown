@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "New Release: Polymer 0.5.2"
+date:   2014-12-12 13:05:00
+categories: releases
+author: polymer-team
+---
+
+_We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
+
+A new release of Polymer is up today - [0.5.2](https://github.com/Polymer/polymer/releases/tag/0.5.2). A few changes to note:
+
+## _New_ Brand New Mixins - `CoreResizable` and `CoreResizer`
+
+With [`Polymer.CoreResizer` and `Polymer.CoreResizable` mixins](https://github.com/Polymer/core-resizable), we've set out to relieve some of the developer pain involved in manually checking an element's size and notifying when an element is resized, shown or hidden. They're fresh out of the oven, but feel free to check them out and [apply the mixins to your element](https://www.polymer-project.org/docs/polymer/helpers.html#using-mixins).
+
+"Resizers" are elements that control the size or hidden state of their children, while "Resizables" are elements that need to be notified when they are resized or un-hidden by their parents in order to take action on their new measurements.
+
+The following elements have been updated to take advantage of these mixins - check them out for code examples of how to use the resize events:
+
+### CoreResizers:
+- [`core-animated-pages`](https://github.com/Polymer/core-animated-pages/)
+- [`core-overlay`](https://github.com/Polymer/core-overlay/)
+- [`core-splitter`](https://github.com/Polymer/core-splitter/)
+
+### CoreResizables:
+- [`core-list`](https://github.com/Polymer/core-list/): no longer need to call `updateSize`
+- [`core-scroll-header-panel`](https://github.com/Polymer/core-scroll-header-panel/): no longer need to call `measureHeaderHeight`
+- [`core-tooltip`](https://github.com/Polymer/core-tooltip/): no longer need to call `positionChanged`
+- [`paper-tabs`](https://github.com/Polymer/paper-tabs/): no longer need to call `updateBar`
+
+## _Updated_ `core-ajax` Content-Type
+
+A minor tweak to `core-ajax`: The `Content-type` header is now set to null when FormData payloads are sent.
+
+## _Updated_ `paper-input` Cursor Animation Removed
+
+We're constantly honing the `paper` elements to make sure they're aligned with the [material design spec](http://www.google.com/design/spec/material-design/introduction.html) - in this revision, we've removed the cursor animation from `paper-input`.
