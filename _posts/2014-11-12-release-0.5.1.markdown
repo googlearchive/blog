@@ -17,6 +17,7 @@ Exciting news - Polymer 0.5.1 is now released! This release corrects a regressio
 * [_New_ `core-scroll-threshold`](#0-5-1_corescrollthreshold)
 * [_New_ Introducing: `<paper-dropdown>`](#0-5-1_paperdropdown)
 * [_Breaking_ `<paper-dialog>` becomes two](#0-5-1_paperdialog)
+* [_Breaking_ `<paper-shadow>` changes](#0-5-1_papershadow)
 * [_Breaking_ Major `core-input` changes](#0-5-1_coreinput)
 * [_Breaking_ `<core-dropdown-menu>`, `<paper-dropdown-menu>` child structure](#0-5-1_coredropdownmenu)
 * [_Breaking_ BYOB (Bring Your Own Button) to `<core-menu-button>` and `<paper-menu-button>`](#0-5-1_coremenubutton)
@@ -105,8 +106,14 @@ Also, it uses transitions from `<core-transition-css>` as opposed to `<paper-dia
         <paper-button affirmative autofocus>Yes do it</paper-button>
     </paper-action-dialog>
 
+## <a name="0-5-1_papershadow"></a>_Breaking_ `<paper-shadow>` changes
+The [`<paper-shadow>` element](https://github.com/Polymer/paper-shadow) has been updated, leading to the following breaking changes:
 
-## <a name="0-5-1_coreinput"></a>_Breaking_ Major `core-input` changes
+- `<paper-shadow>` is now a container instead of targeting another element.
+- To imperatively change the z-level, use `setZ()` instead of just assigning the `z` property.
+- `z` uses a one-time binding.
+
+## <a name="0-5-1_coreinput"></a>_Breaking_ Major `<core-input>` changes
 We heard lots of feedback on `core-input`, and with this release hopefully makes it much more straightforward and cleaner to use. There are a number of updates:
 
 - `<core-input>` is now used as `<input is="core-input">` with a `committedValue` availability. `<core-input>` on its own is no longer a thing.
