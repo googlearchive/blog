@@ -53,9 +53,9 @@ The `paper-toggle-button` has also been updated to match the material design spe
 ## _Breaking_ `core-icons` rebased to use open-source set; some icons removed
 We now base the `core-icons` set on the open-source [`material-design-icons`](https://github.com/google/material-design-icons) released by Google.
 
-You may have noticed that some previously-included social icons are now missing from the set. We inadvertently released these before we intended to, and we're working hard on being able to release these types of icons soon.
+You may have noticed that some previously-included icons are now missing from the set. We inadvertently released these before we intended to, and we're working hard on being able to release additional icons soon.
 
-Apologies for the false start here! Google's [`material-design-icons`](https://github.com/google/material-design-icons) is constantly growing and includes over 700 open-source icons under [CC-BY](http://creativecommons.org/licenses/by/4.0/), and will be a great resource for the `core-icons` going forward.
+Apologies for the false start here! Google's [`material-design-icons`](https://github.com/google/material-design-icons) is constantly growing and includes 750+ open-source icons under [CC-BY](http://creativecommons.org/licenses/by/4.0/), and will be a great resource for the `core-icons` going forward.
 
 ## _Fixed_ Polymer core library: hash urls no longer rewritten
 A minor but important change: the Polymer library will no longer rewrite hash urls like `<a href="#foo">` when used in templates.
