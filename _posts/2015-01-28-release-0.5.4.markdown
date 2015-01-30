@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "New Release: Polymer 0.5.4"
+date:   2015-1-28 13:41:00
+categories: releases
+author: polymer-team
+---
+
+_We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
+
+We recently released versions [0.5.3](https://github.com/Polymer/polymer/releases/tag/0.5.3) and [0.5.4](https://github.com/Polymer/polymer/releases/tag/0.5.4) of Polymer. This blog post will cover the breaking changes in both releases.
+
+### But first - why 0.5.3 and 0.5.4 together?
+The 0.5.3 release introduced an [SVG-related bug on Safari in webcomponents/webcomponentsjs](https://github.com/webcomponents/webcomponentsjs/commit/7d1e0d8992aacd5da419b33ec50eff30a593201a), which we hotfixed in 0.5.4. 
+
+In these pre-1.0 versions, each "release" has actually been many releases in one: we've revved the polyfills at [github.com/webcomponents/webcomponentsjs](https://github.com/webcomponents/webcomponentsjs), the central Polymer library at [github.com/polymer/polymer](https://github.com/polymer/polymer), and the `core-*` and `paper-*` elements built by the Polymer team all at the same time, and kept the version numbers consistent across all of these. To keep with this style, we re-tagged everything as 0.5.4, even though it technically just included a change in the polyfills.
+
+As [the webcomponentsjs polyfills have already gained a life of their own](https://blog.polymer-project.org/announcements/2014/10/16/platform-becomes-webcomponents/), the core Polymer library nears a 1.0, and the element sets grow and develop, there will soon come a day when we'll version everything independently - today was not this day. We'll be sure to be clear when the great versioning split happens - it will be really important to the overall health of the ecosystem to allow these products to develop at their own pace.
+
+Now - on to the breaking changes!
+
+## _Updated_ `paper-checkbox`
+We updated the `paper-checkbox` look and feel to match the material design guidelines. This slightly affects how `paper-checkbox` can be styled: you must now set `border-color` along with `background-color`.
+
+
+	paper-checkbox::shadow #checkbox.checked { 
+		border-color: #2196f3;
+		background-color: #2196f3;
+	}
+
+The old look:
+
+<img src="/images/releases/paper-checkbox-old.png" style="height: 100px; width: auto;">
+
+The new look:
+
+<img src="/images/releases/paper-checkbox-new.png" style="height: 100px; width: auto;">
+
+## _Updated_ `paper-radio-button`
+Similarly, we updated the `paper-radio-button` to match the new material design spec. To style properly, you must now set `border-color` on an additional element:
+
+	paper-radio-button.blue::shadow #onRadio {
+		background-color: #4285f4;
+	}
+	
+	paper-radio-button[checked].blue::shadow #offRadio {
+		border-color: #4285f4;
+	}
+
+## _Updated_ `paper-toggle-button`
+The `paper-toggle-button` has also been updated to match the material design spec. It is no longer using `paper-radio-button` internally, so its styling guide has changed. Please see the [`paper-toggle-button API docs`](https://www.polymer-project.org/docs/elements/paper-elements.html#paper-toggle-button) for the latest on how to style this element.
+
+## _Breaking_ `core-icons` rebased to use open-source set; some icons removed
+We now base the `core-icons` set on the open-source [`material-design-icons`](https://github.com/google/material-design-icons) released by Google.
+
+You may have noticed that some previously-included icons are now missing from the set. We inadvertently released these before we intended to, and we're working hard on being able to release additional icons soon.
+
+Apologies for the false start here! Google's [`material-design-icons`](https://github.com/google/material-design-icons) is constantly growing and includes 750+ open-source icons under [CC-BY](http://creativecommons.org/licenses/by/4.0/), and will be a great resource for the `core-icons` going forward.
+
+## _Fixed_ Polymer core library: hash urls no longer rewritten
+A minor but important change: the Polymer library will no longer rewrite hash urls like `<a href="#foo">` when used in templates.
+
+## _Fixed_ webcomponents.js ShadowDOM issues
+The [Web Components Polyfills](https://github.com/webcomponents/webcomponentsjs) continue to get better: a number of ShadowDOM fixes have been included in this release.
+
+We're committed to continually improving the Polyfills, and it's been great to see more and more contributions from the community as they've transferred away from the "Polymer" umbrella into [webcomponents.org](http://www.webcomponents.org). Keep those patches coming!
