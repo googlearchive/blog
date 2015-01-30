@@ -48,7 +48,7 @@ Similarly, we updated the `paper-radio-button` to match the new material design 
 	}
 
 ## _Updated_ `paper-toggle-button`
-The `paper-toggle-button` has also been updated to match the material design spec. It is no longer using `paper-radio-button` internally, so its styling guide has changed. Please see the [`paper-toggle-button API docs`](https://www.polymer-project.org/docs/elements/paper-elements.html#paper-toggle-button) for the latest on how to style this element.
+The `paper-toggle-button` has also been updated to match the material design spec. It is no longer using `paper-radio-button` internally, so its styling guide has changed. Please see the [`paper-toggle-button` API docs](https://www.polymer-project.org/docs/elements/paper-elements.html#paper-toggle-button) for the latest on how to style this element.
 
 ## _Breaking_ `core-icons` rebased to use open-source set; some icons removed
 We now base the `core-icons` set on the open-source [`material-design-icons`](https://github.com/google/material-design-icons) released by Google.
