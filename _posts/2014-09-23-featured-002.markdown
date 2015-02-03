@@ -50,8 +50,8 @@ Ray Nicholus' `ajax-form` element provides a simple way to submit forms. `ajax-f
 with traditional form elements, as well as any custom elements that have both a `name` 
 attribute and a `value` -- including the Core and Paper input elements.
 
--   [Github repo](https://github.com/garstasio/ajax-form)
--   [Docs](http://garstasio.github.io/ajax-form/components/ajax-form/)
+-   [Github repo](https://github.com/rnicholus/ajax-form)
+-   [Docs](http://ajax-form.raynicholus.com)
 
 
 
