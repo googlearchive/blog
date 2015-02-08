@@ -4,6 +4,7 @@ title:  "New Release: Polymer 0.5.4"
 date:   2015-1-28 13:41:00
 categories: releases
 author: polymer-team
+excerpt: We recently released versions [0.5.3](https://github.com/Polymer/polymer/releases/tag/0.5.3) and [0.5.4](https://github.com/Polymer/polymer/releases/tag/0.5.4) of Polymer. This blog post will cover the breaking changes in both releases.
 ---
 
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
@@ -11,7 +12,7 @@ _We announce significant releases here on the blog, highlighting the major new f
 We recently released versions [0.5.3](https://github.com/Polymer/polymer/releases/tag/0.5.3) and [0.5.4](https://github.com/Polymer/polymer/releases/tag/0.5.4) of Polymer. This blog post will cover the breaking changes in both releases.
 
 ### But first - why 0.5.3 and 0.5.4 together?
-The 0.5.3 release introduced an [SVG-related bug on Safari in webcomponents/webcomponentsjs](https://github.com/webcomponents/webcomponentsjs/commit/7d1e0d8992aacd5da419b33ec50eff30a593201a), which we hotfixed in 0.5.4. 
+The 0.5.3 release introduced an [SVG-related bug on Safari in webcomponents/webcomponentsjs](https://github.com/webcomponents/webcomponentsjs/commit/7d1e0d8992aacd5da419b33ec50eff30a593201a), which we hotfixed in 0.5.4.
 
 In these pre-1.0 versions, each "release" has actually been many releases in one: we've revved the polyfills at [github.com/webcomponents/webcomponentsjs](https://github.com/webcomponents/webcomponentsjs), the central Polymer library at [github.com/polymer/polymer](https://github.com/polymer/polymer), and the `core-*` and `paper-*` elements built by the Polymer team all at the same time, and kept the version numbers consistent across all of these. To keep with this style, we re-tagged everything as 0.5.4, even though it technically just included a change in the polyfills.
 
@@ -23,7 +24,7 @@ Now - on to the breaking changes!
 We updated the `paper-checkbox` look and feel to match the material design guidelines. This slightly affects how `paper-checkbox` can be styled: you must now set `border-color` along with `background-color`.
 
 
-	paper-checkbox::shadow #checkbox.checked { 
+	paper-checkbox::shadow #checkbox.checked {
 		border-color: #2196f3;
 		background-color: #2196f3;
 	}
@@ -42,7 +43,7 @@ Similarly, we updated the `paper-radio-button` to match the new material design 
 	paper-radio-button.blue::shadow #onRadio {
 		background-color: #4285f4;
 	}
-	
+
 	paper-radio-button[checked].blue::shadow #offRadio {
 		border-color: #4285f4;
 	}

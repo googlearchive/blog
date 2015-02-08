@@ -4,6 +4,8 @@ title:  "Polymer 0.4.2 Released!"
 date:   2014-10-02 21:17:00
 categories: releases
 author: polymer-team
+excerpt: Lots of new element features included in this release, as well as some <a href="#breaking-changes">breaking changes</a> to be aware of
+
 ---
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
 
@@ -43,7 +45,7 @@ You could render the list as follows, where the `name` and `checked` properties 
     <core-list data="{{data}}" height="80">
         <template>
             <div class="{{ {selected: selected} | tokenList }}">
-                List row: {{ index }}, Name: {{ model.name }} 
+                List row: {{ index }}, Name: {{ model.name }}
                 <input type="checkbox" checked="{{ model.checked }}">
             </div>
         </template>
@@ -70,18 +72,18 @@ Your basic image:
 
 A light-gray background fading in to the image:
 {% raw %}
-    <core-image style="width:400px; height:400px; background-color: lightgray;" 
-                sizing="cover" 
-                preload 
-                fade 
+    <core-image style="width:400px; height:400px; background-color: lightgray;"
+                sizing="cover"
+                preload
+                fade
                 src="http://lorempixel.com/600/400">
     </core-image>
 {% endraw %}
 
 Letterboxed:
 {% raw %}
-    <core-image style="width:400px; height:400px" 
-                sizing="contain" 
+    <core-image style="width:400px; height:400px"
+                sizing="contain"
                 src="http://lorempixel.com/600/400">
     </core-image>
 {% endraw %}
@@ -92,7 +94,7 @@ There are a few important breaking API changes to `paper-button` to make it simp
 
 - `raisedButton` attribute is now just `raised`
 - `label` attribute is now deprecated. The new usage is to put the label in light DOM.
-- `icon` attribute has been removed. The new usage is to put a `core-icon` inside of the `paper-button`. 
+- `icon` attribute has been removed. The new usage is to put a `core-icon` inside of the `paper-button`.
 
 Here's an example of the changes at work:
 
@@ -124,5 +126,5 @@ Did you know you can use `Polymer.mixin` to provide shared behavior between Poly
 
 ### We're fully on the HTTPS train
 
-Access your Polymer securely, at [https://www.polymer-project.org](https://www.polymer-project.org) and [https://blog.polymer-project.org](https://blog.polymer-project.org). 
+Access your Polymer securely, at [https://www.polymer-project.org](https://www.polymer-project.org) and [https://blog.polymer-project.org](https://blog.polymer-project.org).
 
