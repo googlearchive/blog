@@ -4,6 +4,8 @@ title:  "Introducing Polymer 0.5.1"
 date:   2014-11-12 14:44:00
 categories: releases
 author: polymer-team
+excerpt: Exciting news - Polymer 0.5.1 is now released! This release corrects a regression in 0.5.0, and the two together represent lots of updates and fixes. This one even gets its own table of contents
+
 ---
 
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
@@ -45,7 +47,7 @@ As a quick relevant reminder: the [Vulcanize tool](https://github.com/polymer/vu
 
 If you'd like to develop from the minified `polymer.js` file from the start, you can change the reference to `polymer.js` inside the `polymer.html` import to reference `polymer.min.js`.
 
-## <a name="0-5-1_wct"></a>_New_ `WebComponentTester` 
+## <a name="0-5-1_wct"></a>_New_ `WebComponentTester`
 Everyone _loves_ tests, but it has traditionally been a little annoying to test polymer elements. As part of this release, we are also introducing a test runner that aims to make testing web components moar awesomer: [web-component-tester](https://github.com/Polymer/web-component-tester).
 
 WCT sets up a test environment with tools that many of us know and love (Mocha, Chai, Sinon.JS, async.js, etc.), and wraps them up in a world where .html tests are supported as first class citizens. With this in place, we've been adding more and more tests to our elements, and have been really enjoying the improved experience when writing them - we hope you will too.

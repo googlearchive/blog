@@ -4,6 +4,7 @@ title:  "Polymer 0.4.1 Released!"
 date:   2014-09-18 18:22:00
 categories: releases
 author: polymer-team
+excerpt: A small update, with some important new changes to be aware of
 ---
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
 
@@ -54,25 +55,25 @@ This could be useful for debugging. Loading:
     </head>
     <body>
         <polymer-element name="x-foo" noscript>
-            <template>x-foo</template>    
+            <template>x-foo</template>
         </polymer-element>
-     
+
         <polymer-element name="x-bar">
-            <template>x-bar</template>    
+            <template>x-bar</template>
         </polymer-element>
-     
+
         <polymer-element name="x-baz" extends="x-bar">
-            <template>x-baz</template>    
+            <template>x-baz</template>
         </polymer-element>
-     
+
         <x-foo></x-foo>
         <x-bar></x-bar>
         <x-baz></x-baz>
         <x-zot></x-zot>
-     
+
     </body>
     </html>
-    
+
 will show a blank page, as Polymer is waiting for scripts for `x-foo` and `x-bar`. Typing:
 
 `$ Polymer.waitingFor()` in the console will show what elements are not complete yet.
@@ -83,4 +84,4 @@ will show a blank page, as Polymer is waiting for scripts for `x-foo` and `x-bar
 It's finally here - and we've updated to support some changes/bugs that have cropped up in iOS8 Safari:
 
 - Workaround for [Safari 8 DOM bug](https://github.com/Polymer/ShadowDOM/pull/506) in ShadowDOM polyfill
-- Workaround for [touch event bugs](https://github.com/Polymer/polymer-gestures/commit/39cf501) 
+- Workaround for [touch event bugs](https://github.com/Polymer/polymer-gestures/commit/39cf501)

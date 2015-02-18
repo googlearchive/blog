@@ -63,7 +63,7 @@ Previously, published properties that were not yet set would default to `null` -
         </script>
     </polymer-element>
 
-Instantiating it and inspecting its property will result in: 
+Instantiating it and inspecting its property will result in:
 
     > $('x-foo').barProperty
     undefined
