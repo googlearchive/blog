@@ -4,7 +4,8 @@ title:  "New Release: Polymer 0.5.2"
 date:   2014-12-12 13:05:00
 categories: releases
 author: polymer-team
-excerpt: A new release of Polymer is up today - [0.5.2](https://github.com/Polymer/polymer/releases/tag/0.5.2). A few changes to note
+excerpt: A new release of Polymer is up today - 0.5.2.
+
 ---
 
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._

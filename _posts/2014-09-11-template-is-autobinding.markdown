@@ -4,6 +4,8 @@ title:  "<template is=\"auto-binding\"> is=awesome"
 date:   2014-09-11 12:00:00
 categories: howto
 author: jeffy
+excerpt: If you've created your own Polymer element, chances are you're a fan of the extra goodies that the `template` tag offers within an element's definition.
+
 ---
 
 If you've [created](http://www.polymer-project.org/docs/start/creatingelements.html) your own Polymer element, chances are you're a fan of the extra goodies that the [`<template>`](http://www.polymer-project.org/docs/polymer/databinding-advanced.html) tag offers within an element's definition. Variable interpolation with `{%raw%}{{}}{%endraw%}`, event binding via on-*event* attributes, and conditional and repeated templates all provide a powerful, consistent way to work declaratively with the DOM. But what if you're not creating your own elements, and instead writing a web application that makes use of Polymer elements? You don't have to resort to using alternative libraries for templating or setting up traditional [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener) bindings. We've taught the [HTML5 `<template>` tag](http://www.html5rocks.com/en/tutorials/webcomponents/template/) new tricks by extending it as a custom element, referred to as `<template is="auto-binding">`.

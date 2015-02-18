@@ -4,6 +4,8 @@ title:  "Polymer 0.4.0 Released!"
 date:   2014-08-31 6:22:00
 categories: releases
 author: polymer-team
+excerpt: This one's a big one! Here are the major changes to watch out for.
+
 ---
 _Going forward, we'll announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is still hot out of the oven, so there'll be lots of entropy in these early releases as things harden. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
 

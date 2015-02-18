@@ -4,6 +4,8 @@ title:  "Polymer Polytechnics this November"
 date:   2014-10-09 13:31:00
 categories: events
 author: rob
+excerpt: Over the past year, developer interest in Polymer and Web Components has exploded. We're thrilled to see this happen, and we want to try to find new ways to scale and bring the awesomness of these technologies to as many developers as possible.
+
 ---
 
 ## It's hackademic!

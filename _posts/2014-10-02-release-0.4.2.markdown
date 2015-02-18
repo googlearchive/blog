@@ -4,7 +4,7 @@ title:  "Polymer 0.4.2 Released!"
 date:   2014-10-02 21:17:00
 categories: releases
 author: polymer-team
-excerpt: Lots of new element features included in this release, as well as some <a href="#breaking-changes">breaking changes</a> to be aware of
+excerpt: Lots of new element features included in this release, as well as some breaking changes to be aware of
 
 ---
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._

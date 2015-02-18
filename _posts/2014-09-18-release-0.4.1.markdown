@@ -4,7 +4,7 @@ title:  "Polymer 0.4.1 Released!"
 date:   2014-09-18 18:22:00
 categories: releases
 author: polymer-team
-excerpt: A small update, with some important new changes to be aware of
+excerpt: A small update, with some important new changes to be aware of.
 ---
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
 

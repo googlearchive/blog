@@ -4,6 +4,9 @@ title:  "Community Highlights #2"
 date:   2014-09-23 15:15:00
 categories: featured
 author: arthur
+excerpt: In this installment of the community highlights, blog posts from near and far; a new showcase; polymer snippets; and a custom
+element to help you submit forms.
+
 ---
 
 _In this installment of the community highlights, blog posts from near and far; a new showcase; polymer snippets; and a custom

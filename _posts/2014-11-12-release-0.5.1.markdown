@@ -4,7 +4,7 @@ title:  "Introducing Polymer 0.5.1"
 date:   2014-11-12 14:44:00
 categories: releases
 author: polymer-team
-excerpt: Exciting news - Polymer 0.5.1 is now released! This release corrects a regression in 0.5.0, and the two together represent lots of updates and fixes. This one even gets its own table of contents
+excerpt: Exciting news - Polymer 0.5.1 is now released! This release corrects a regression in 0.5.0, and the two together represent lots of updates and fixes. This one even gets its own table of contents.
 
 ---
 
