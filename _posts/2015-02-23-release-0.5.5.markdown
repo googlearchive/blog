@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "New Release: Polymer 0.5.5"
+date:   2015-02-23 17:22:00
+categories: releases
+author: polymer-team
+excerpt: A new, small update to Polymer, the core and paper elements, and Web Components polyfill has been released.
+
+---
+
+_We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. Bear in mind, Polymer is in Developer Preview as we continue to explore the new world of Web Components, and these releases may have particularly high entropy. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
+
+A new, small update to Polymer, the core and paper elements, and the Web Components polyfill has been [released](https://github.com/polymer/polymer/releases).
+
+## _New_ `paper-input-decorator` character counter
+
+Awesome work from [notwaldorf](https://github.com/notwaldorf) with the brand-new character-counter addition to `paper-input-decorator`. The character counting feature matches the material design spec, and allows for custom error messages.
+
+An example of using the new character counter:
+
+    <paper-input-decorator label="input with 10 character max"
+         error="maximum characters exceeded">
+      <input id="i2" is="core-input" maxlength="10">
+      <paper-char-counter class="counter" target="i2"></paper-char-counter>
+    </paper-input-decorator>
+    
+<img src="/images/releases/paper-input-char-counter.png" style="height: 300px; width: auto; margin-left: auto; margin-right: auto;" alt="paper input decorator image">
+
+## _New_ `paper-tabs` now have `alignBottom` attribute
+
+Thanks to [GabiAxel](https://github.com/GabiAxel) we now have the `alignBottom` attribute available for `paper-tabs`, which does what you might expect: aligns the tabs to the bottom!
+
+## _Breaking_ `core-ajax` now parses errors like normal responses
+
+The `core-ajax` element has been updated to evaluate errors and parse them with the same format as `handleAs` - thank you to [fwal](https://github.com/fwal) for the patch! You can check out the specific PR that introduces this change [here.]((https://github.com/Polymer/core-ajax/pull/63))
+
+A bug has also been fixed in `core-ajax` thanks to a patch from [bearfriend](https://github.com/bearfriend) - correctly [checking status](https://github.com/Polymer/core-ajax/commit/367df82) when returning from `isSuccess`.
+
+## _Updated_ `firebase-element` has been updated with a number of bugfixes
+
+The `firebase-element` overall is a great example of an API-as-an-element - it's been updated with a number of tweaks and bug fixes.  If you haven't already, now's a great time to [check it out!](https://github.com/polymer/firebase-element/)
+
+## _Updated_ Lots of fixes in improvements to `webcomponentsjs`
+
+The Web Components Polyfills are constantly getting better and better - this release was no exception. There have been lots of bug fixes and additions - check out the full [0.5.5 release notes](https://github.com/polymer/polymer/releases) for more details.
