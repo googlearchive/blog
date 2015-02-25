@@ -26,7 +26,7 @@ An example of using the new character counter:
     
 <img src="/images/releases/paper-input-char-counter.png" style="height: 300px; width: auto; margin-left: auto; margin-right: auto;" alt="paper input decorator image">
 
-## _New_ `paper-tabs` now have `alignBottom` attribute
+## _New_ `paper-tabs` now has an `alignBottom` attribute
 
 Thanks to [GabiAxel](https://github.com/GabiAxel) we now have the `alignBottom` attribute available for `paper-tabs`, which does what you might expect: aligns the tabs to the bottom!
 
