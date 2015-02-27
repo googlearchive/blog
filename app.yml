@@ -27,6 +27,17 @@ handlers:
   upload: _site/feed\.xml
   secure: optional
 
+# Map /gwtcreate/ to the new overview deck
+- url: /gwtcreate/$
+  upload: _site/decks/polymer-overview/index.html
+  static_files: _site/decks/polymer-overview/index.html
+  secure: always
+
+- url: /gwtcreate/(.*)
+  upload: _site/decks/polymer-overview/(.*)
+  static_files: _site/decks/polymer-overview/\1
+  secure: always
+
 # Map raw paths with trailing "/" to an index.html file.
 - url: /(.*)/$
   static_files: _site/\1/index.html
