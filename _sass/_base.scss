@@ -47,17 +47,9 @@ a:visited { color: #205caa; }
   background-color: white;
 }
 
-.site-title,
-.site-title:hover,
-.site-title:visited {
+.site-title {
   display: block;
-  color: #333;
-  font-size: 26px;
-  letter-spacing: -1px;
-  float: left;
-  line-height: 56px;
-  position: relative;
-  z-index: 1;
+  margin-top: 10px;
 }
 
 .site-nav {
