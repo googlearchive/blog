@@ -12,7 +12,7 @@ As many have already noticed, over the last day or so we've been updating the [P
 
 The 0.8 release is a big step towards a 1.0: we're rolling out changes to the site to create a place to show 0.8 documentation, to enable better support for versioning, and generally to create a more stable home that will be able to grow with the library.
 
-# What to expect with the site for 0.8
+## What to expect with the site for 0.8
 
 0.8 will be a new baseline for feedback - it will be hot out of the oven, but able to stand on its own. Consider it an "alpha" release - rough around the edges but generally whole, with the express purpose of getting feedback on the core API changes. Note that only a few of the elements with 0.5 have been migrated to 0.8 so far.
 
@@ -20,7 +20,7 @@ With this in mind, we're working to accompany the release with a baseline of doc
 
 We're also setting up the ability to version the documentation on the site - you'll notice that [https://www.polymer-project.org/](https://www.polymer-project.org/) currently takes you to https://www.polymer-project.org/0.5/ (the latest stable version). 0.8 will be transitional for the site as it is for the library and we'll be growing into this new versioning feature, but expect more and more firm structure like this to emerge.
 
-With regards to elements - we're working on major updates to the elements built by the Polymer team (you can see some progress in Github branches), including a better way of showcasing the element sets than we current have on the site. We'll keep the 0.5 elements the same as they are currently on the site. For 0.8, we plan on keeping compatible elements on Github for now as they're being built, and are working on new and improved ways to demo elements and generate and view their documentation.
+With regards to elements - we're working on major updates to the elements built by the Polymer team (you can see some progress in Github branches), including a better way of showcasing the element sets than we currently have on the site. We'll keep the 0.5 elements the same as they are currently on the site. For 0.8, we plan on keeping compatible elements on Github for now as they're being built, and are working on new and improved ways to demo elements and generate and view their documentation.
 
 ## What should you do now?
 
