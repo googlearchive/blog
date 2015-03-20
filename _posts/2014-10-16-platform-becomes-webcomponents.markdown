@@ -4,7 +4,7 @@ title:  "platform.js ⇒ webcomponents.js"
 date:   2014-10-16 15:31:00
 categories: announcements
 author: polymer-team
-excerpt: We wanted to give developers an early heads up for a pretty big change coming down the line: the `platform.js` file that contains the Web Components polyfills will be renamed to `webcomponents.js` and transferred to WebComponents.org.
+excerpt: We wanted to give developers an early heads up for a pretty big change coming down the line. the `platform.js` file that contains the Web Components polyfills will be renamed to `webcomponents.js` and transferred to WebComponents.org.
 
 ---
 

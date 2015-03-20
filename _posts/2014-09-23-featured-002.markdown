@@ -4,8 +4,7 @@ title:  "Community Highlights #2"
 date:   2014-09-23 15:15:00
 categories: featured
 author: arthur
-excerpt: In this installment of the community highlights, blog posts from near and far; a new showcase; polymer snippets; and a custom
-element to help you submit forms.
+excerpt: In this installment of the community highlights, blog posts from near and far; a new showcase; polymer snippets; and a custom element to help you submit forms.
 
 ---
 
@@ -19,42 +18,39 @@ On the Divshot blog, Michael Bleigh wrote about some [Polymer Features You May H
 
 ## Built with Polymer
 
-Also from the good folks at Divshot, [builtwithpolymer.org](http://builtwithpolymer.org/) is a new showcase for apps 
-and sites built with Polymer. It's also an [open-source project](https://github.com/divshot/built-with-polymer) written in Polymer. 
-Check it out! If you have a site you'd like to show off, you can either send them a note 
+Also from the good folks at Divshot, [builtwithpolymer.org](http://builtwithpolymer.org/) is a new showcase for apps
+and sites built with Polymer. It's also an [open-source project](https://github.com/divshot/built-with-polymer) written in Polymer.
+Check it out! If you have a site you'd like to show off, you can either send them a note
 or submit a pull request to the [Github repo](https://github.com/divshot/built-with-polymer).
 
 ![Built with Polymer site](/images/featured/builtwithpolymer.png)
 
 ## Polymer on IBM developerWorks
 
-Sing Li has written an introduction to Polymer on IBM developerWorks, 
-[Join the Web Components revolution with Polymer](http://www.ibm.com/developerworks/library/wa-polymer/), 
+Sing Li has written an introduction to Polymer on IBM developerWorks,
+[Join the Web Components revolution with Polymer](http://www.ibm.com/developerworks/library/wa-polymer/),
 as part of an ongoing series of articles on web components.
 
 
 
 ## Polymer & Web components snippets for Sublime Text
 
-If you use Sublime Text, you might want to try Rob Dodson's 
-[Polymer and Web Components Snippets for Sublime](https://github.com/robdodson/PolymerSnippets). You 
-can install them using the Package Control plugin or manually from the 
+If you use Sublime Text, you might want to try Rob Dodson's
+[Polymer and Web Components Snippets for Sublime](https://github.com/robdodson/PolymerSnippets). You
+can install them using the Package Control plugin or manually from the
 [Github repo](https://github.com/robdodson/PolymerSnippets).
 
 
 ## The `ajax-form` element
 
-Recently several people have asked about how to submit form elements. Many custom input 
-elements, including the Core and Paper input elements, don't work well with the native 
-`<form>` element. Of course you can submit form data using an `XMLHttpRequest`, but 
+Recently several people have asked about how to submit form elements. Many custom input
+elements, including the Core and Paper input elements, don't work well with the native
+`<form>` element. Of course you can submit form data using an `XMLHttpRequest`, but
 that means writing your own boilerplate to package up the values and send the request.
- 
-Ray Nicholus' `ajax-form` element provides a simple way to submit forms. `ajax-form` works 
-with traditional form elements, as well as any custom elements that have both a `name` 
+
+Ray Nicholus' `ajax-form` element provides a simple way to submit forms. `ajax-form` works
+with traditional form elements, as well as any custom elements that have both a `name`
 attribute and a `value` -- including the Core and Paper input elements.
 
 -   [Github repo](https://github.com/rnicholus/ajax-form)
 -   [Docs](http://ajax-form.raynicholus.com)
-
-
-
