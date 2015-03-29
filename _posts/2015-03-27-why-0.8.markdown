@@ -8,16 +8,13 @@ excerpt: The 0.8 release represents a bit step forward for Polymer. Here's recap
 
 ---
 
-> "To every web library there comes in its lifetime that special moment, when it is figuratively tapped on the shoulder and offered the chance to do a very special thing, to initiate a major redesign in order to become multiples more performant and a fraction of the size..."  
-      _-- Pretty sure it was Winston Churchill - big javascript fan._
-
-As we were building and evolving the "Developer Preview" version of the Polymer library, we had this metaphorical tap-on-the-shoulder moment and decided to respond. The 0.8 release is the result of this decision - a new formulation of the library that is radically more performant. It's a change that has come after a great deal of consideration and experimentation, and we hope it will be a turning point on the road to 1.0.
+As we were building and evolving the "Developer Preview" version of the Polymer library, we made the hard decision to do a large internal refactor in order to shift away from experimentation and toward production-readiness. The 0.8 release is the result of this decision - a new formulation of the library that is radically more performant. It is a change that has come after a great deal of consideration and experimentation, and we hope it will be a turning point on the road to 1.0.
 
 ---
 
 ## The Road to 0.8
 
-The Polymer project started as an experiment, to answer the question: "Could this Web Components thing work for developers?" Polymer and the Web Components specs grew up together - each evolved and changed with feedback from the community and implementors, each developed best practices and shaped API, until they had reached a relatively stable symbiosis.
+The Polymer project started as an experiment, to answer the question: "Could this Web Components thing work for developers?" Polymer and the Web Components specs grew up together - each evolved and changed with feedback from the community and implementors, each developed best practices and shaped their API, until they had reached a relatively stable symbiosis.
 
 The Polymer project then hit a sort of tipping point - as popularity grew, more and more developers were hitting the upper-limit to what the library could do. Polymer had been built around proving the ergonomics of web components and wasn't focused on productionization - this was reflected in the feedback we were receiving. It was great to build apps, but deploying them into production was another story. To cut to the chase - apps with lots of Polymer-based elements were unacceptably slow on mobile Safari.
 
@@ -53,6 +50,4 @@ A few things to note:
 - In terms of 0.5 support, we expect to rapidly deprecate this version of the library and elements, but recognize that many projects won't be able to switch over to 0.8+ until the elements are ready. We'll continue merging PR's and tracking issues for 0.5 until this is the case, and may do some incremental 0.5 releases when necessary. The vast majority of effort will be going towards the 1.0 release.
 - We're shooting to release updated elements as they are ready, and for a 1.0 release of the core library by mid-year.
 
-There are a few things we tried to do to minimize the pain:
-- Message the change early and often. We announced 0.8 at Chrome Dev Summit 2014
-- Develop in public in a branch, and document as we go.
+Check out the full run-down on the 0.8 release over at the [Polymer Project site](TODO: site link to splash page), including the API documentation and porting guide. We're really excited about this release and hear your experiences with it, and to hit the ground running towards a 1.0!
