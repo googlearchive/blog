@@ -4,7 +4,7 @@ title:  "0.8 Released!"
 date:   2015-03-27 13:28:00
 categories: updates
 author: taylor
-excerpt: The 0.8 release represents a bit step forward for Polymer. Here's recap of the reasoning behind the 0.8 update and some of the changes from 0.5.
+excerpt: The 0.8 release represents a big step forward for Polymer. Here's a recap of the reasoning behind the 0.8 update and some of the changes from 0.5.
 
 ---
 
