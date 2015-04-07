@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "0.8 Released!"
+date:   2015-03-27 13:28:00
+categories: updates
+author: taylor
+excerpt: The 0.8 release represents a big step forward for Polymer. Here's a recap of the reasoning behind the 0.8 update and some of the changes from 0.5.
+
+---
+
+While evolving the “Developer Preview” of Polymer, we made the tough decision to do a significant internal redesign. This move enabled us to move away from experimentation towards production-readiness, and is a big step towards a 1.0.
+
+## The Road to 0.8
+
+The Polymer project started as an experiment, to answer the question: "Could Web Components be used to help developers be more productive?" Polymer and the Web Components specs grew up together - each evolved and changed with feedback from the community and implementors, each developed best practices and shaped their API, until they had reached a relatively stable symbiosis.
+
+The Polymer project then hit a sort of tipping point - as popularity grew, more and more developers were hitting the upper-limit to what the library could do. Polymer had been built around proving the ergonomics of web components and wasn't focused on productionization - this was reflected in the feedback we were receiving. It was great for building apps, but deploying them into production was another story. To cut to the chase: apps with lots of Polymer-based elements were unacceptably slow on mobile Safari.
+
+Of course, this was almost entirely due to requiring the [Web Components polyfills](https://www.github.com/webcomponents/webcomponentsjs). With native web components implemented, there is no such performance penalty.
+
+But we couldn't operate indefinitely in a world of "what if's" - it was time to face the facts. The library could either remain an experiment, ignoring the performance hit of polyfills and patiently awaiting the cross-browser native implementation of Web Components. Or we could put our money where our mouth was and rebuild the library with a focus on performance across all browsers, enabling projects to actually use web components in production. Instead of showcasing the power of web components in isolation, we could help spread their usage in the wild, and hopefully help further their native implementation through broad uptake with only a shallow performance hit for the polyfills.
+
+To make an informed decision, we had to know exactly what kind of performance boost would be achievable. So Scott, our chief architect, started with what the Polymer project does best - an experiment. The hypothesis: with careful engineering, constant measurement, and calculated tradeoffs, it would be possible to make a significant improvement in performance without dramatically changing API or ergonomics.
+
+The 0.8 experiment started from first principles: since Polymer is purely a sugaring library on top of Web Components, what would be the minimum set of features needed to sugar the `document.registerElement` call? From there we added back in, a layer at a time, the features that make Polymer more useful - template stamping, mixins, property to attribute serialization - at each level testing the performance cost of the feature and optimizing as we went.
+
+The "experiment" ended around Chrome Dev Summit last year, and we were genuinely surprised by the results. Not only was a performance improvement possible; it could be multiple times better over both the polyfills and native Web Components. Instead of being significantly slower when using the polyfills, there would only be a 10-20% hit compared to native Web Components with all else being equal. And the payload of the new library would be a fraction of what it had been. Matt announced the results of the experiment at Chrome Dev Summit:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0LT6W5QVCJI" frameborder="0" allowfullscreen></iframe>
+
+Since then, we've worked hard to bring the new formulation of the library towards feature parity with the previous 0.5 release. We added back in a new, fast, and more debug-able data-binding system, and included a new API to make DOM manipulation safe, fast, and consistent regardless of web components environment - polyfilled or native.
+
+Against our `medium-list` benchmark, the start-up time of the new release, 0.8, vs. the previous release 0.5, is as follows:
+
+![benchmark for 0.8: 4-8x faster](/images/releases/benchmark.svg)
+
+You can dig more into this benchmark [here](https://github.com/polymerlabs/benchmarks).
+
+## 0.8 is just the beginning.
+
+We’ve made 0.8 available early - as soon as the core API was stable and relatively well baked - for the express purpose of [getting feedback](https://github.com/polymer/polymer/issues) soon. For this reason, some of the elements you may have come to use and love - the core & paper elements, vulcanize and so on - are still being upgraded to work with the new codebase.
+
+We’ve got big plans for the elements themselves - starting with this release, we’ll be breaking out elements into true “product lines,” with their own timelines, milestones, and release cycles. We think the distinction between Polymer-the-library and elements-built-with-Polymer is an important one, so we’ll be looking to separate the documentation for the elements out from the library documentation, and to provide a first-class showcase of the material design elements as well as other element sets we’re working on.
+
+A few things to note:
+
+- The library is still very young, and some features that were present in 0.5 are still missing. We cover the main features that didn't make the 0.8 cut and that we plan on bringing into upcoming releases on our [roadmap](https://www.polymer-project.org/0.8/#roadmap). We would love any and all feedback here, as well as PR's of course!  
+- Documentation for now is still very much focused on the practical, and not necessarily the "getting started" experience yet. We'll be working hard to build a much gentler onramp as we near 1.0 - consider 0.8 an "alpha" release, for hard-core early adopters willing to work around some rough edges.  
+- We'll be getting back to a rapid release cadence, so expect lots of bug fixes, improvements, and some API changes to come down the pipeline. That said, our aim for 0.8 was to get the major breaking changes out of the way all at once prior to 1.0, and we we're confident we'll be able to keep to this.  
+- Starting shortly, we'll continue building the library in the open on Github on `master` rather than the `0.8-release` branch, so feel free to add issues and PR's as usual. Please tag all issues that relate to the prior 0.5 version of the library explicitly as 0.5.  
+- In terms of 0.5 support, we recognize many projects are still using this version and won’t be able to switch to 0.8 until the elements are ready. We aim to continue reviewing/merging PR’s for 0.5 until this is the case. When it is, we aim to deprecate 0.5 support so we can focus our efforts on shipping a polished 1.0 all users can rely on.  
+- We're shooting to release updated elements as they are ready, and for a 1.0 release of the core library by mid-year.  
+
+Check out the full run-down on the 0.8 release over at the [Polymer Project site](https://www.polymer-project.org/0.8/), including the API documentation and porting guide. We're really excited about this release and to hear your experiences with it, and to hit the ground running towards a 1.0.
