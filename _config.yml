@@ -24,7 +24,7 @@ authors:
         display_name: polymer team
         github: Polymer
     taylor:
-        display_name: taylor
+        display_name: Taylor Savage
         github: tjsavage
     jeffy:
         display_name: Jeff Posnick
@@ -38,4 +38,3 @@ authors:
 
 # Serve settings
 # detach: true
-
