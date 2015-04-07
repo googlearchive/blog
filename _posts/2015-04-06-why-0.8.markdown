@@ -8,7 +8,7 @@ excerpt: The 0.8 release represents a big step forward for Polymer. Here's a rec
 
 ---
 
-While evolving the “Developer Preview” of Polymer, we made the tough decision to do a significant internal redesign. This move enabled us to move away from experimentation towards production-readiness, and is a big step towards a 1.0.
+While evolving the “Developer Preview” of Polymer, we made the tough decision to do a significant internal redesign. This move enabled us to move away from experimentation towards production-readiness, and is a big step towards a 1.0. You can get the code for the 0.8 release [here](https://www.polymer-project.org/0.8/docs/start/getting-the-code.html).
 
 ## The Road to 0.8
 
@@ -20,11 +20,11 @@ Of course, this was almost entirely due to requiring the [Web Components polyfil
 
 But we couldn't operate indefinitely in a world of "what if's" - it was time to face the facts. The library could either remain an experiment, ignoring the performance hit of polyfills and patiently awaiting the cross-browser native implementation of Web Components. Or we could put our money where our mouth was and rebuild the library with a focus on performance across all browsers, enabling projects to actually use web components in production. Instead of showcasing the power of web components in isolation, we could help spread their usage in the wild, and hopefully help further their native implementation through broad uptake with only a shallow performance hit for the polyfills.
 
-To make an informed decision, we had to know exactly what kind of performance boost would be achievable. So Scott, our chief architect, started with what the Polymer project does best - an experiment. The hypothesis: with careful engineering, constant measurement, and calculated tradeoffs, it would be possible to make a significant improvement in performance without dramatically changing API or ergonomics.
+To make an informed decision, we had to know exactly what kind of performance boost would be achievable. So we started with what the Polymer project does best - an experiment. The hypothesis: with careful engineering, constant measurement, and calculated tradeoffs, it would be possible to make a significant improvement in performance without dramatically changing API or ergonomics.
 
 The 0.8 experiment started from first principles: since Polymer is purely a sugaring library on top of Web Components, what would be the minimum set of features needed to sugar the `document.registerElement` call? From there we added back in, a layer at a time, the features that make Polymer more useful - template stamping, mixins, property to attribute serialization - at each level testing the performance cost of the feature and optimizing as we went.
 
-The "experiment" ended around Chrome Dev Summit last year, and we were genuinely surprised by the results. Not only was a performance improvement possible; it could be multiple times better over both the polyfills and native Web Components. Instead of being significantly slower when using the polyfills, there would only be a 10-20% hit compared to native Web Components with all else being equal. And the payload of the new library would be a fraction of what it had been. Matt announced the results of the experiment at Chrome Dev Summit:
+The "experiment" ended around Chrome Dev Summit last year, and we were genuinely surprised by the results. Not only was a performance improvement possible; it could be multiple times faster than before, regardless of whether it was running over the polyfills or native web components. Instead of being significantly slower when using the polyfills, there would only be a 10-20% hit compared to native Web Components with all else being equal. And the payload of the new library would be a fraction of what it had been. Matt announced the results of the experiment at Chrome Dev Summit:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0LT6W5QVCJI" frameborder="0" allowfullscreen></iframe>
 
