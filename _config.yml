@@ -35,6 +35,8 @@ authors:
     rob:
         display_name: rob
         github: robdodson
-
+    addy:
+        display_name: Addy Osmani
+        github: addyosmani
 # Serve settings
 # detach: true

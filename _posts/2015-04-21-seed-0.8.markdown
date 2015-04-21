@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "Polymer 0.8 seed-element is out!"
+date:   2015-04-21 18:38:00
+categories: features
+author: addyosmani
+excerpt: Create reusable Polymer 0.8 elements with our new version of `seed-element`. Features support for our latest version of web-component-tester and polyserve - a new way to serve up elements.
+
+---
+
+If you've written a [reusable Polymer element](https://www.polymer-project.org/0.5/docs/start/reusableelements.html) before, you may have tried out `<seed-element>` - our recommended starting point for new components. In line with refreshing Polymer for 0.8, we've just released a brand [new version](https://github.com/PolymerLabs/seed-element) of `<seed-element>` too. Roll on the :cake: emoji.
+
+`<seed-element>` [0.1.7](https://github.com/PolymerLabs/seed-element) uses the new Polymer 0.8 syntax right out of the box, is well commented and also includes updated boilerplate for writing your own [unit tests](https://github.com/PolymerLabs/seed-element/blob/master/test/basic-test.html#L30) using the latest version of [web-component-tester](https://github.com/Polymer/web-component-tester).
+
+In addition, this new version includes support for our new Documentation viewer [`<iron-doc-viewer>`](https://github.com/polymerelements/iron-doc-viewer) and a new, convenient way of serving up your reusable elements called [Polyserve](https://github.com/PolymerLabs/polyserve).
+
+## Getting started
+
+To get started with the new version of `<seed-element>`, follow these three steps:
+
+
+* Create a new directory on your system for working on Polymer elements (e.g "development").
+* Download the [seed-element](https://github.com/PolymerLabs/seed-element) boilerplate and unzip it in your working directory.
+* Rename the element and its files accordingly. For example, if your element is called `<fancy-button>` and you’ve renamed the seed-element directory to fancy-button, your file list should look a little like this:
+
+
+<pre>
+├── README.md
+├── bower.json
+├── demo
+│   └── index.html
+├── fancy-button.html
+├── index.html
+└── test
+    ├── basic-test.html
+    └── index.html
+</pre>
+
+## Playing with your element
+
+If you wish to work on your element in isolation, we recommend that you use
+[Polyserve](https://github.com/PolymerLabs/polyserve) to keep your element's
+bower dependencies in line. You can install it via:
+
+    npm install -g polyserve
+
+And you can run it via:
+
+    polyserve
+
+Once running, you can view your element's files under
+`http://localhost:8080/components/seed-element/`, where `seed-element` is the
+name of the directory containing it.
+
+## Testing your element
+
+Simply navigate to the `/test` directory of your element to run its tests. If
+you are using Polyserve: `http://localhost:8080/components/seed-element/test/`
+
+### web-component-tester
+
+The tests are compatible with [web-component-tester](https://github.com/Polymer/web-component-tester).
+Install it via:
+
+    npm install -g web-component-tester
+
+Then, you can run your tests on _all_ of your local browsers via:
+
+    wct
+
+## Support for Polymer 0.5
+
+If you're creating reusable elements using Polymer 0.5.x, we recommend using seed-element 0.1.5, the last version of the boilerplate with support for older versions of Polymer.
+
+## Wrapping up
+
+Try out the new version of `<seed-element>`, let us know what you think and please feel free to file bugs if anything looks out of place. Rock on.
