@@ -86,7 +86,7 @@ We've graduated the custom property styling system - you no longer have to expli
 
 ## Cross-scope binding API
 
-In `dom-if` (previously `x-if`) and `dom-repeat` (previously `x-repeat`), properties from the outer scope rae now directly available inside the inner scope. Previously in 0.8 you had to explicitly reach to the outer scope using `parent.`
+In `dom-if` (previously `x-if`) and `dom-repeat` (previously `x-repeat`), properties from the outer scope are now directly available inside the inner scope. Previously in 0.8 you had to explicitly reach to the outer scope using `parent.`
 
 ## Renaming `dom-repeat`'s `item`
 
