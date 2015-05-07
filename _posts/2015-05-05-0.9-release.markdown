@@ -14,7 +14,7 @@ The evolution of the Polymer library continues - we're nearing 0.9!
 
 First, a bit about the 0.8 releases:
 
-For the 0.8 version of the library, we've been keeping all of the 0.8 releases tagged as `0.8-rc*`. This has been explicitly to keep improperly specified `bower.json` from breaking suddenly - with an out-of-the-ordinary level of incompatibility from 0.5 to 0.8, along with not yet having the `paper` and `core` elements updated to the new formulation of the library, we didn't want to suddenly surprise everyone with a drastically breaking `bower update`.
+For the 0.8 version of the library, we've been keeping all of the [0.8 releases](https://github.com/Polymer/polymer/tags) tagged as `0.8-rc*`. This has been explicitly to keep improperly specified `bower.json` from breaking suddenly - with an out-of-the-ordinary level of incompatibility from 0.5 to 0.8, along with not yet having the `paper` and `core` elements updated to the new formulation of the library, we didn't want to suddenly surprise everyone with a drastically breaking `bower update`.
 
 Because of this, the 0.8 release was a bit of a "transitory" release - quickly iterating on the new API surface area while upgrading all of our elements.
 
