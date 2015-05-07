@@ -1,0 +1,133 @@
+---
+layout: post
+title:  "0.9 released!"
+date:   2015-05-09 11:57:35
+author: polymer-team
+categories: announcements
+---
+The 0.9 release is very similar to 0.8, with many of the "experimental" 0.8 features now officially supported.  Below are our release notes for 0.9, relative to 0.8 - please check out our [full migration guide](https://www.polymer-project.org/0.8/docs/migration.html) for all of the changes from 0.5.
+
+## Experimental elements make it to the big leagues!
+
+We've renamed a whole bunch of the `x-*` elements that shipped with the library in 0.8 - here's the rundown:
+
+* `x-repeat` becomes `dom-repeat`
+* `x-if` becomes `dom-if`
+* `x-template` becomes `dom-template`
+* `x-autobind` becomes `dom-bind`
+* `x-style` becomes `custom-style`
+* `x-array-selector` becomes `array-selector`
+
+## `getPathValue` and `setPathValue` renamed
+
+The `getPathValue` and `setPathValue` functions used for [path change notifications](https://www.polymer-project.org/0.8/docs/devguide/data-binding.html#set-path) have been renamed to `set` and `get` for simplicity (and saving precious keystrokes!)
+
+## Array observation changes
+
+Previous, changes to arrays were observed using an Array.observe (or a shim, where this was unsupported). This was used in cases like the `x-repeat` element.
+
+Array mutations are no longer observed this way - instead, array mutations must be done via `this.push()`, `this.pop()`, `this.unshift()`, and `this.splice()`.
+
+This lets Polymer be must more performant in identifying array changes. Using the array mutation API's ensure any elements int he tree bound to the same array are updated based on the change. It also makes all the ways you modify structured data in Polymer consistent - always using `get`, `set`, `push`, `pop`, `shift`, `unshift`, and `splice` for objects or arrays.
+
+In addition, using '<path-to-array>.splices' as an argument to an observer or computed property will cause it to be called with a change record containing 'keySplices' and 'indexSplices' arrays describing changes that occurred to the array.  This also has the nice side-effect that now a computed function like `{{countChecked(todos.*)}}` will be called for additions, removals, and sub-property changes to the array.
+
+## Basic gestures supported in core
+
+We added some basic, extremely common gesture recognition features back into the core library (they existed in 0.5). These include:
+
+* up
+* down
+* tap
+* track
+
+We're working on addition more complex gestures to be optionally included in elements that need them as "behaviors" - more on this soon!
+
+# Style system updates
+
+## `x-style` becomes `custom-style`
+
+In the first of many graduations from "experimental-mode" to the big leagues, the `x-style` element is now `custom-style`.
+
+## Renamed mixin to @apply, for the styling API
+
+Using the custom properties-based style inheritance system that's experimental in 0.8 and "official" in 0.9, you can mixin "bags of properties" to inherit across shadow boundaries, to use for theming components.
+
+The syntax for this system has changed in 0.9 as it has graduated from experimental. The old syntax was:
+
+    mixin(--property-set)
+
+The new syntax is:
+
+    @apply(--property-set)
+
+
+## Now support the `:root` selector
+
+The `:root` selector always matches the document's root element - this is now supported in `custom-style` (the element previously known as `x-style`).
+
+See the [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables#sample2) for creative ways in which this can be leveraged.
+
+## CSS variable defaults
+
+The `custom-style` system is becoming even more powerful - now, defaults for custom CSS variables are supported. For example, if you want users of your element to be able to theme it but still want to set a sensible default, you can do so:
+
+    <style is="custom-style">
+      div.header {
+        background-color: var(--primary-color, red);
+      }
+    </style>
+
+## `enableCustomStyleProperties: true` no longer needed
+
+We've graduated the custom property styling system - you no longer have to explicitly set `enableCustomStyleProperties: true` in your object to leverage this system, as it's on by default.
+
+# Cross-scope updates
+
+## Cross-scope binding API
+
+In `dom-if` (previously `x-if`) and `dom-repeat` (previously `x-repeat`), properties from the outer scope are now directly available inside the inner scope. Previously in 0.8 you had to explicitly reach to the outer scope using `parent.`
+
+## Renaming `dom-repeat`'s `item`
+
+By default, `dom-repeat` places array items into the new scope with the name `item`. In 0.9, you can now specify what you'd like the scope variable name to be with the `as` attribute. For example:
+
+    <template is="dom-repeat" items="{{users}}" as="user">
+      <div>{{user.name}}</div>
+    </template>
+
+# Miscellaneous API Changes
+
+## Method signature of `transform` and `translate3d` changed
+
+The method signature of the `transform` and `translate3d` utility functions provided by the Polymer library have been changed.
+
+*Old*
+
+    transform: function(node, transform)
+    translate3d: function(node, x, y, z)
+
+*New*
+
+    transform: function(transform [, node])
+    translate3d: function(x, y, z [, node])
+
+The `node` arguments now come last, and default to `this`.
+
+You can learn more about all of Polymer's utility functions [here](https://www.polymer-project.org/0.8/docs/devguide/utility-functions.html)
+
+## Debounce functions added
+
+We've added `cancelDebouncer`, `flushDebouncer`, and `isDebouncerActive` to give more handles around debouncing.
+
+## Explicity `property` methods removed
+
+We've removed the `getPropertyType`, `isReadOnlyProperty`, `isNotifyProperty`, and `isReflectedProperty` functions to ask more about properties - now you can call `getPropertyInfo(prop)` to get all of this information.
+
+## `_data` prop change
+
+The `data` property used for accessor storage has been renamed to `__data__` to avoid conflict with private user variables.
+
+## `_` added to Polymer methods to denote privacy
+
+We ran through Polymer methods that should be "private" and marked them with a leading underscore.
