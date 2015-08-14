@@ -4,7 +4,7 @@ title:  "1.1 Release"
 date:   2015-08-13 9:32:55
 author: polymer-team
 categories: announcements
-excerpt: A bunch of newly 1.0-compatible components are out!
+excerpt: We've added our first, small minor release. This includes a new way of sharing styles between elements and the main document. 
 
 ---
 _We announce significant releases here on the blog, highlighting the major new features as well as breaking changes. As always, we'd love to get your feedback, issues, and PR's, so tweet us [@polymer](https://twitter.com/polymer) or contribute to the [Github](https://github.com/Polymer)._
