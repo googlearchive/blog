@@ -35,6 +35,9 @@ authors:
     rob:
         display_name: rob
         github: robdodson
+    fbeaufort:
+        display_name: François Beaufort
+        github: beaufortfrancois
 
 # Serve settings
 # detach: true
