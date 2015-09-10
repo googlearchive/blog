@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Discover and communicate with nearby Bluetooth devices"
-date:   2015-09-14 9:32:55
+date:   2015-09-9 11:32:55
 author: fbeaufort
 categories: announcements
-excerpt: A new set of Polymer elements that simplify discovering and communicating with nearby Bluetooth devices, powered behind the scenes by the experimental Web Bluetooth API is now available.
+excerpt: Introducing a new set of Polymer elements that simplify discovering and communicating with nearby Bluetooth devices, powered behind the scenes by the experimental Web Bluetooth API.
 
 ---
 
-I'm particularly glad to share with you today the [platinum bluetooth elements](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device), a
+We're particularly glad to share with you today the [platinum bluetooth elements](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device), a
 brand new set of [Polymer platinum
 elements](https://elements.polymer-project.org/browse?package=platinum-elements)
 to discover and communicate with nearby Bluetooth devices. These new components
@@ -16,7 +16,7 @@ are powered behind the scenes by the experimental [Web Bluetooth
 API](http://webbluetoothcg.github.io/web-bluetooth/).
 
 Even though the Web Bluetooth API specification is not finalized yet, we can
-already play with it as it's already partially implemented in Chrome OS M45
+already play with it as it's partially implemented in Chrome OS M45
 behind an experimental flag. Go to `chrome://flags/#enable-web-bluetooth`, enable
 the highlighted flag, restart Chrome and you should be able to scan for and
 connect to nearby Bluetooth devices and read/write Bluetooth characteristics.
@@ -37,7 +37,7 @@ will give you an idea of what you can do with it:
 
 It is worth mentioning again there that due to [security
 requirements](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web#https-only),
-Web Bluetooth will only work for HTTPS websites.  I would recommend you set up
+Web Bluetooth will only work for HTTPS websites.  We would recommend you set up
 [HSTS](http://www.chromium.org/hsts) for enforcing HTTPS on your website. If
 you don't control the server, check out our new
 [`<platinum-https-redirect>`](https://elements.polymer-project.org/elements/platinum-https-redirect)
@@ -141,7 +141,7 @@ button.addEventListener('click', function() {
 
 {% endhighlight %}
 
-One of my favorite ways to write though is to use the `auto-write` property of
+One of our favorite ways to write though is to use the `auto-write` property of
 the `<platinum-bluetooth-characteristic>` element. When set to `true`, changes
 in `value` will automatically drive characteristic writes.
 
