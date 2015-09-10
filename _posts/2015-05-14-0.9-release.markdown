@@ -16,7 +16,7 @@ The 0.9 release is very similar to 0.8, with many of the "experimental" 0.8 feat
 
 As we talked about a bit in our [previous post](https://blog.polymer-project.org/updates/2015/05/06/0.9-release/), we've had a fast pace of change in the library beginning with the 0.8 release. We have been getting lots of feedback as hoped for and are rapidly polishing the rough edges of the library to move towards a stable 1.0  - this has allowed us to have 0.9 out the door rather quickly. We expect only extremely minor breaking changes between 0.9 and an eventual 1.0 - the transition path will consist almost entirely of bugfixes and performance improvements.
 
-In addition, nearly all of the elements that existed for Polymer 0.5 have now been ported to the most recent release. You can check out the available elements built by the Polymer team in the [PolymerElements](https://github.com/polymerelements) organization on Github.
+In addition, nearly all of the elements that existed for Polymer 0.5 have now been ported to the most recent release. You can check out the available elements built by the Polymer team in the [PolymerElements](https://github.com/polymerelements) organization on Github. If you're looking for old "core" elements, they've been renamed to the "iron" elements - more on this rename in a [follow-up post](https://blog.polymer-project.org/announcements/2015/05/14/updated-elements/)
 
 So the big question - *"should I upgrade now?"*
 
@@ -24,6 +24,6 @@ Now is a great time to start kicking the tires, especially if you are building y
 
 If you are mid-transition to 0.8, we'd recommend upgrading to 0.9 as well - you can take a look at the [release notes](https://www.polymer-project.org/0.9/docs/release-notes.html) to get a sense of what this might entail, but you'll gain some ergonomics improvements and ease-of-use features. The upgrade from 0.8 to 0.9 (and eventually to 1.0) will *not* be the major change that 0.5 to 0.8 was - it will be largely renames and the introduction of powerful new features.
 
-If you're a heavy user of the elements built by the Polymer team, many of the [elements](https://github.com/polymerelements) having 0.9-compatible releases, though the documentation for the elements is still embedded within the source code. We're very close to having this documentation hosted - if you're willing to dig through the source code for the documentation you can start migrating now, otherwise hold tight a couple weeks and we'll have a brand-new way to view the element documentation.
+If you're a heavy user of the elements built by the Polymer team, many of the [elements](https://github.com/polymerelements) have 0.9-compatible releases, though the documentation for the elements is still embedded within the source code. We're very close to having this documentation hosted - if you're willing to dig through the source code for the documentation you can start migrating now, otherwise hold tight a couple weeks and we'll have a brand-new way to view the element documentation.
 
 We'd like to thank everyone again for bearing with us through these fast transitions from "developer preview" in 0.5 to "alpha" in 0.8 to "beta" in 0.9 - we're incredibly excited for the smoothing out with 1.0 that is right around the corner.
