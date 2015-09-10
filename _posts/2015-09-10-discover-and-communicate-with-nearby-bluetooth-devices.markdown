@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Discover and communicate with nearby Bluetooth devices"
-date:   2015-09-9 11:32:55
+date:   2015-09-10 11:32:55
 author: fbeaufort
 categories: announcements
 excerpt: Introducing a new set of Polymer elements that simplify discovering and communicating with nearby Bluetooth devices, powered behind the scenes by the experimental Web Bluetooth API.
