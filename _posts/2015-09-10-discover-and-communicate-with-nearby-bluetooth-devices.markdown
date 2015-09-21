@@ -104,12 +104,12 @@ button.addEventListener('click', function() {
 
 {% endhighlight %}
 
-For info, it is also possible for `<platinum-bluetooth-characteristic>` to fill
-in a data-bound field `value` in response to a read.
+It is also possible for `<platinum-bluetooth-characteristic>` to use data
+binding to bind to `value` in response to a read.
 
 ## Write to a Bluetooth Characteristic
 
-Here's an example on how to reset energy expended on nearby bluetooth
+Here's an example of how to reset the energy expended on a nearby bluetooth
 device advertising Heart Rate service:
 
 {% highlight html %}
