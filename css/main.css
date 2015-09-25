@@ -848,22 +848,29 @@ a:visited {
   margin-bottom: 25px;
 }
 
-/* line 11, ../_sass/main.scss */
+/* line 15, ../_sass/main.scss */
+.post-content .video-embed iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 21, ../_sass/main.scss */
 .posts li {
   margin-bottom: 0px;
 }
 
-/* line 15, ../_sass/main.scss */
+/* line 25, ../_sass/main.scss */
 .posts ul {
   list-style-type: circle;
 }
 
-/* line 19, ../_sass/main.scss */
+/* line 29, ../_sass/main.scss */
 .post code {
   overflow-wrap: break-word;
 }
 
-/* line 23, ../_sass/main.scss */
+/* line 33, ../_sass/main.scss */
 .post pre > code {
   overflow-wrap: normal;
 }

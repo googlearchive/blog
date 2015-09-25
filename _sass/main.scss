@@ -8,8 +8,18 @@
     margin-bottom: 25px;
 }
 
-.posts li { 
-    margin-bottom: 0px; 
+.post-content .video-embed {
+
+}
+
+.post-content .video-embed iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.posts li {
+    margin-bottom: 0px;
 }
 
 .posts ul {
