@@ -12,7 +12,7 @@ In case you missed any of the action at this year's Polymer Summit, we focused o
 
 ### Keynote
 
-Welcome to this first ever Polymer Summit event! In the Polymer Summit Keynote, Taylor talked about how the Polymer core team is thinking about Polymer's past, present, and future.
+In the Keynote, we talked about how the Polymer core team is thinking about Polymer's past, present, and future.
 
 <div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/jVn8tlnwAEs" frameborder="0" allowfullscreen></iframe></div>
 
@@ -86,6 +86,12 @@ In these sessions, find out how Polymer can help your apps look and work great f
 A look at the breadth and depth of Polymer's built-in gesture library, and how your elements can be interactive, responsive, and cross-platform.
 
 <div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/YiiXKoLYLMo" frameborder="0" allowfullscreen></iframe></div>
+
+### Polymer's Styling System
+
+Traditionally, CSS stylesheets have a terrible opinion about style encapsulation: the only thing stopping one element’s style from stomping over another’s is a “well chosen class name”. The Shadow DOM fixes this by building a little castle and a moat around each element, so that styles can’t get in and out of the web component castle. But what happens if you _do_ want to style this custom element? How do you cross the moat? Custom properties, that’s how.
+
+<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/IbOaJwqLgog" frameborder="0" allowfullscreen></iframe></div>
 
 ### Polymer's Animation System
 
