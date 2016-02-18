@@ -8,7 +8,7 @@ excerpt: "A spin through the Polymer project roadmap for the beginning of 2016."
 
 ---
 
-We wanted to share our roadmap for the Polymer project for the next 6 months or so - lots of exciting features and updates on the horizon. Of course, things don't always go as planned so we fully expect some of this will change, and we'd especially love your feedback and any questions: this roadmap will also be posted and continually updated at [https://github.com/polymer/project](https://github.com/polymer/project), so feel free to use the [issue tracker there](https://github.com/polymer/project/issues) for any questions or thoughts.
+We wanted to share our roadmap for the Polymer project for the next 6 months or so - lots of exciting features and updates on the horizon. Of course, things don't always go as planned so we fully expect some of this will change, and we'd especially love your feedback and any questions: this roadmap will also be posted and continually updated at [https://github.com/polymer/project](https://github.com/polymer/project), so feel free to use the [issue tracker there](https://github.com/polymer/project/issues) for any questions or thoughts. A great way to track progress on all of these efforts will be to simply watch the [https://github.com/polymer/project](https://github.com/polymer/project) repository, and of course to follow this blog.
 
 ### Building Applications with Polymer  
 
