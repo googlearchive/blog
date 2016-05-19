@@ -2,7 +2,7 @@ application: polymer-project-blog
 version: 1
 runtime: python27
 api_version: 1
-threadsafe: yes
+threadsafe: false
 
 #default_expiration: "0s"
 
@@ -16,6 +16,9 @@ libraries:
 handlers:
 
 # Top-level URLs ---------------------------------------------------------------
+- url: /.*
+  script: redirect.py
+
 - url: /$
   static_files: _site/index.html
   upload: _site/index\.html
